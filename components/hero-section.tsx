@@ -310,7 +310,7 @@ export function HeroSection() {
               color: '#e8d49a',
               lineHeight: 1,
             }}>
-              4.9 <Star size={14} fill="#e8d49a" color="#e8d49a" style={{ marginTop: 2 }} />
+              5 <Star size={14} fill="#e8d49a" color="#e8d49a" style={{ marginTop: 2 }} />
             </div>
             <div style={{
               fontFamily: "'Jost', sans-serif",
@@ -332,7 +332,7 @@ export function HeroSection() {
               fontWeight: 600,
               color: '#e8d49a',
               lineHeight: 1,
-            }}>5yr</div>
+            }}>4yr</div>
             <div style={{
               fontFamily: "'Jost', sans-serif",
               fontSize: '0.65rem',
