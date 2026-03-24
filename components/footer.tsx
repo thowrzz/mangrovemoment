@@ -245,7 +245,7 @@ export function Footer() {
   border: '1px solid rgba(201,168,76,0.4)',
   flexShrink: 0,
 }}>
-  <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 </div>
               <div>
                 <div style={{
