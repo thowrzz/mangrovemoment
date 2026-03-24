@@ -243,7 +243,7 @@ export function Navbar() {
   transition: 'all 0.3s',
 }}>
   <img
-    src="/logo.png"
+    src="./logo.png"
     alt="Mangrove Moments Logo"
     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
   />
