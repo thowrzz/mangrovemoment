@@ -233,19 +233,21 @@ export function Navbar() {
             {/* ── Logo ── */}
             <Link href="#home" className="flex items-center gap-3 group" style={{ textDecoration: 'none' }}>
               {/* Icon mark */}
-              <div style={{
-                width: 36, height: 36,
-                border: '1px solid rgba(201,168,76,0.5)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '1.1rem',
-                clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)',
-                background: 'rgba(201,168,76,0.08)',
-                transition: 'all 0.3s',
-              }}
-                className="group-hover:bg-accent/20"
-              >
-                🌿
-              </div>
+              {/* Logo image */}
+<div style={{
+  width: 44, height: 44,
+  borderRadius: '50%',
+  overflow: 'hidden',
+  border: '1px solid rgba(201,168,76,0.4)',
+  flexShrink: 0,
+  transition: 'all 0.3s',
+}}>
+  <img
+    src="/logo.png"
+    alt="Mangrove Moments Logo"
+    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+  />
+</div>
               <div>
                 <div className="logo-text">Mangrove Moments</div>
                 <div className="logo-sub">Paravur · Kollam</div>

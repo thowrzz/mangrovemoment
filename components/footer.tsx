@@ -19,7 +19,7 @@ const activityLinks = [
 ]
 
 const socials = [
-  { href: 'https://instagram.com', icon: Instagram, label: 'Instagram' },
+  { href: 'https://www.instagram.com/varkala_mangrove_moments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: Instagram, label: 'Instagram' },
   { href: 'https://youtube.com', icon: Youtube, label: 'YouTube' },
   { href: 'https://wa.me/919876543210', icon: MessageCircle, label: 'WhatsApp' },
 ]
@@ -236,17 +236,17 @@ export function Footer() {
         }}
           className="ft-grid"
         >
-          {/* Brand column */}
           <div>
             <Link href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', marginBottom: 20 }}>
               <div style={{
-                width: 40, height: 40,
-                border: '1px solid rgba(201,168,76,0.35)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '1.1rem',
-                clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)',
-                background: 'rgba(201,168,76,0.07)',
-              }}>🌿</div>
+  width: 44, height: 44,
+  borderRadius: '50%',
+  overflow: 'hidden',
+  border: '1px solid rgba(201,168,76,0.4)',
+  flexShrink: 0,
+}}>
+  <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+</div>
               <div>
                 <div style={{
                   fontFamily: "'Cormorant Garamond', serif",
