@@ -263,7 +263,7 @@ export function Footer() {
                   textTransform: 'uppercase',
                   color: '#c9a84c',
                   marginTop: 3,
-                }}>Paravur · Kollam</div>
+                }}>Paravur · Varkala</div>
               </div>
             </Link>
 
@@ -319,7 +319,7 @@ export function Footer() {
             <div className="ft-contact-item">
               <MapPin size={14} color="rgba(201,168,76,0.5)" strokeWidth={1.5} style={{ marginTop: 2, flexShrink: 0 }} />
               <span className="ft-contact-text">
-                Paravur Lake, Kollam<br />Kerala – 691334, India
+                Paravur Lake, Varkal<br />Kerala – 691334, India
               </span>
             </div>
 
@@ -379,7 +379,7 @@ export function Footer() {
         </span>
         <span className="eco-badge">
           <Leaf size={10} />
-          Eco-responsible tourism · Paravur, Kollam, Kerala
+          Eco-responsible tourism · Paravur, Varkala, Kerala
         </span>
       </div>
 

@@ -21,7 +21,27 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+
+    // Build a rich WhatsApp message from all form fields
+    const activityLabel = activities.find(a => a.value === formData.activity)?.label || formData.activity
+
+    const waMessage = [
+      `🌿 *New Booking Request – Mangrove Moments*`,
+      ``,
+      `👤 *Name:* ${formData.name}`,
+      `📞 *Phone:* ${formData.phone}`,
+      `🎯 *Activity:* ${activityLabel}`,
+      `📅 *Date:* ${formData.date}`,
+      `👥 *People:* ${formData.people}`,
+      formData.message ? `💬 *Message:* ${formData.message}` : '',
+    ].filter(Boolean).join('\n')
+
+    const waNumber = '919876543210' // ← Replace with your real WhatsApp number
+    const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`
+
+    // Opens WhatsApp with pre-filled booking message
+    window.open(waURL, '_blank')
+
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
@@ -301,7 +321,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="info-title">Location</div>
-                  <div className="info-value">Paravur Lake, Kollam</div>
+                  <div className="info-value">Paravur Lake, Varkala</div>
                   <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.75rem', color: '#999', marginTop: 2 }}>
                     Kerala – 691334, India
                   </div>
@@ -344,7 +364,7 @@ export function ContactSection() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Paravur Lake, Kollam"
+                  title="Paravur Lake, Varkala"
                 />
               </div>
             </div>
@@ -361,7 +381,7 @@ export function ContactSection() {
                   fontWeight: 300,
                   color: '#fff',
                 }}>
-                  Booking Request Sent!
+                  Opening WhatsApp…
                 </div>
                 <div style={{
                   fontFamily: "'Jost', sans-serif",
@@ -371,7 +391,7 @@ export function ContactSection() {
                   lineHeight: 1.7,
                   maxWidth: '260px',
                 }}>
-                  We'll confirm your slot within 2 hours via WhatsApp or phone.
+                  Your booking details have been pre-filled. Just hit Send in WhatsApp to confirm your slot!
                 </div>
               </div>
             ) : (
@@ -490,10 +510,10 @@ export function ContactSection() {
                     />
                   </div>
 
-                  {/* Submit */}
+                  {/* Submit — opens WhatsApp */}
                   <button type="submit" className="submit-btn" style={{ marginTop: '8px' }}>
-                    <Send size={14} />
-                    Send Booking Request
+                    <MessageCircle size={14} />
+                    Send via WhatsApp
                   </button>
 
                   {/* Trust note */}
@@ -508,7 +528,7 @@ export function ContactSection() {
                     color: 'rgba(255,255,255,0.3)',
                   }}>
                     <Clock size={11} />
-                    We reply within 2 hours · No spam, ever
+                    Opens WhatsApp with your booking details pre-filled
                   </div>
                 </form>
               </>
@@ -547,7 +567,7 @@ export function ContactSection() {
           fontWeight: 300,
           color: 'rgba(255,255,255,0.35)',
         }}>
-          © {new Date().getFullYear()} Mangrove Moments · Paravur, Kollam
+          © {new Date().getFullYear()} Mangrove Moments · Paravur, Varkala
         </div>
         <div style={{
           fontFamily: "'Jost', sans-serif",

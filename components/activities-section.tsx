@@ -76,6 +76,11 @@ export function ActivitiesSection() {
   const scrollToContact = () =>
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
 
+  const bookOnWhatsApp = (activityName: string) => {
+    const message = encodeURIComponent(`Hi! I'd like to book the *${activityName}* experience. Please share availability and details.`)
+    window.open(`https://wa.me/919744201662?text=${message}`, '_blank')
+  }
+
   return (
     <section
       id="activities"
@@ -105,9 +110,10 @@ export function ActivitiesSection() {
         .act-card:hover .act-img {
           transform: scale(1.06);
         }
-        .act-card:hover .act-book-btn {
-          background: #0d2415;
-          color: #c9a84c;
+
+        /* Book Now button — card hover nudge */
+        .act-card:hover .act-book-btn .book-btn-arrow {
+          transform: translateX(3px);
         }
 
         .act-img {
@@ -165,24 +171,48 @@ export function ActivitiesSection() {
           text-transform: uppercase;
         }
 
+        /* ── NEW Book Now Button ── */
         .act-book-btn {
           font-family: 'Jost', sans-serif;
           font-size: 0.68rem;
           font-weight: 600;
-          letter-spacing: 0.14em;
+          letter-spacing: 0.16em;
           text-transform: uppercase;
-          background: #f7f5f0;
-          color: #0d2415;
+          background: #0d2415;
+          color: #fff;
           border: none;
-          padding: 11px 0;
-          width: 100%;
+          padding: 11px 20px 11px 16px;
+          width: auto;
           cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+          clip-path: polygon(0% 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 0% 100%);
+        }
+        .act-book-btn:hover {
+          background: #c9a84c !important;
+          color: #0d2415 !important;
+          box-shadow: 0 6px 20px rgba(201,168,76,0.35);
+        }
+        .act-book-btn:hover .book-btn-arrow {
+          transform: translateX(3px) !important;
+          color: #0d2415 !important;
+        }
+
+        .book-btn-left {
           display: flex;
           align-items: center;
-          justify-content: center;
-          gap: 6px;
-          transition: all 0.25s;
-          border-top: 1px solid rgba(0,0,0,0.06);
+          gap: 8px;
+        }
+
+        .book-btn-dot {
+          display: none;
+        }
+
+        .book-btn-arrow {
+          transition: transform 0.25s;
+          color: #c9a84c;
         }
 
         .section-label {
@@ -211,7 +241,7 @@ export function ActivitiesSection() {
           content: '';
           position: absolute;
           inset: 0;
-          background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
         }
 
         .promo-wa-btn {
@@ -348,7 +378,7 @@ export function ActivitiesSection() {
               </div>
 
               {/* Card Body */}
-              <div style={{ padding: '20px 20px 0' }}>
+              <div style={{ padding: '20px 20px 20px' }}>
                 {/* Name + duration */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                   <h3 className="act-name">{activity.name}</h3>
@@ -359,16 +389,18 @@ export function ActivitiesSection() {
                 </div>
 
                 {/* Description */}
-                <p className="act-desc" style={{ marginBottom: '18px' }}>
+                <p className="act-desc" style={{ marginBottom: '20px' }}>
                   {activity.description}
                 </p>
-              </div>
 
-              {/* Book button — full width at bottom */}
-              <button className="act-book-btn" onClick={scrollToContact}>
-                Book This Experience
-                <ArrowRight size={13} />
-              </button>
+                {/* ── NEW Book Now Button ── */}
+                <button className="act-book-btn" onClick={() => bookOnWhatsApp(activity.name)}>
+                  <span className="book-btn-left">
+                    Book Now
+                  </span>
+                  <ArrowRight size={13} className="book-btn-arrow" />
+                </button>
+              </div>
             </div>
           ))}
         </div>

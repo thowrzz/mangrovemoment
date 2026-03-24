@@ -47,12 +47,41 @@ const features = [
   },
 ]
 
+// ★ CHANGED: "6 Experiences" → "100% Safety", "4yr" → "4yr" (visible), star rating added
 const stats = [
   { value: '500+', label: 'Happy Guests' },
-  { value: '4.9', label: 'Star Rating', suffix: '★' },
-  { value: '6', label: 'Experiences' },
-  { value: '5', label: 'Years Running', suffix: 'yr' },
+  { value: '4.9', label: 'Star Rating', isStars: true },
+  { value: '100%', label: 'Safety Record' },
+  { value: '4', label: 'Years Running', suffix: 'yr' },
 ]
+
+// Star Rating Component — renders 5 stars with 4.9 fill
+function StarRating({ score = 4.9 }: { score?: number }) {
+  return (
+    <div style={{ display: 'flex', gap: '3px', justifyContent: 'center', marginBottom: '6px' }}>
+      {[1, 2, 3, 4, 5].map((s) => {
+        const fill = Math.min(1, Math.max(0, score - (s - 1)))
+        const id = `star-grad-${s}`
+        return (
+          <svg key={s} width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id={id} x1="0" x2="1" y1="0" y2="0">
+                <stop offset={`${fill * 100}%`} stopColor="#c9a84c" />
+                <stop offset={`${fill * 100}%`} stopColor="rgba(201,168,76,0.18)" />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+              fill={`url(#${id})`}
+              stroke="#c9a84c"
+              strokeWidth="1.2"
+            />
+          </svg>
+        )
+      })}
+    </div>
+  )
+}
 
 export function WhyChooseUsSection() {
   return (
@@ -70,7 +99,6 @@ export function WhyChooseUsSection() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
-        /* Subtle texture overlay */
         .why-bg-pattern::before {
           content: '';
           position: absolute;
@@ -139,7 +167,7 @@ export function WhyChooseUsSection() {
           line-height: 1.7;
         }
 
-        /* Stats row */
+        /* ★ Stats — made clearly visible */
         .stat-item {
           text-align: center;
           padding: 0 24px;
@@ -147,10 +175,11 @@ export function WhyChooseUsSection() {
         .stat-value {
           font-family: 'Cormorant Garamond', serif;
           font-size: 2.8rem;
-          font-weight: 300;
-          color: #e8d49a;
+          font-weight: 400;
+          color: #f0d97a;          /* brighter gold — was #e8d49a */
           line-height: 1;
           margin-bottom: 6px;
+          text-shadow: 0 0 24px rgba(201,168,76,0.35);
         }
         .stat-label {
           font-family: 'Jost', sans-serif;
@@ -158,11 +187,11 @@ export function WhyChooseUsSection() {
           font-weight: 500;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.35);
+          color: rgba(255,255,255,0.65);  /* was 0.35 — now clearly visible */
         }
         .stat-sep {
           width: 1px;
-          background: rgba(255,255,255,0.08);
+          background: rgba(255,255,255,0.12);
           align-self: stretch;
         }
 
@@ -234,7 +263,7 @@ export function WhyChooseUsSection() {
           text-transform: uppercase;
           color: #c9a84c;
         }
-        .section-title {
+        .section-title1 {
           font-family: 'Cormorant Garamond', serif;
           font-size: clamp(2.2rem, 4vw, 3.2rem);
           font-weight: 300;
@@ -248,25 +277,17 @@ export function WhyChooseUsSection() {
         }
       `}</style>
 
-      {/* Dot-grid texture */}
       <div className="why-bg-pattern" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
 
-      {/* Decorative large circle */}
       <div style={{
-        position: 'absolute',
-        top: '-120px', right: '-120px',
-        width: '500px', height: '500px',
-        borderRadius: '50%',
-        border: '1px solid rgba(201,168,76,0.06)',
-        pointerEvents: 'none',
+        position: 'absolute', top: '-120px', right: '-120px',
+        width: '500px', height: '500px', borderRadius: '50%',
+        border: '1px solid rgba(201,168,76,0.06)', pointerEvents: 'none',
       }} />
       <div style={{
-        position: 'absolute',
-        bottom: '-80px', left: '-80px',
-        width: '320px', height: '320px',
-        borderRadius: '50%',
-        border: '1px solid rgba(201,168,76,0.05)',
-        pointerEvents: 'none',
+        position: 'absolute', bottom: '-80px', left: '-80px',
+        width: '320px', height: '320px', borderRadius: '50%',
+        border: '1px solid rgba(201,168,76,0.05)', pointerEvents: 'none',
       }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', position: 'relative' }}>
@@ -274,7 +295,7 @@ export function WhyChooseUsSection() {
         {/* ── Header ── */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '64px', gap: '14px' }}>
           <p className="section-label">Why Choose Us</p>
-          <h2 className="section-title">
+          <h2 className="section-title1">
             The Mangrove Moments
             <br />
             <em style={{ fontStyle: 'italic', color: '#c9a84c' }}>Difference</em>
@@ -297,8 +318,8 @@ export function WhyChooseUsSection() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          border: '1px solid rgba(255,255,255,0.06)',
-          background: 'rgba(255,255,255,0.02)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          background: 'rgba(255,255,255,0.03)',
           padding: '32px 0',
           marginBottom: '48px',
           flexWrap: 'wrap',
@@ -307,10 +328,20 @@ export function WhyChooseUsSection() {
           {stats.map((s, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
               <div className="stat-item">
-                <div className="stat-value">
-                  {s.value}
-                  {s.suffix && <span style={{ fontSize: '1.4rem', color: '#c9a84c' }}>{s.suffix}</span>}
-                </div>
+                {/* ★ Star rating gets its own visual treatment */}
+                {s.isStars ? (
+                  <>
+                    <StarRating score={4.9} />
+                    <div className="stat-value" style={{ fontSize: '1.6rem', marginBottom: '4px' }}>
+                      4.9 <span style={{ fontSize: '1rem', color: '#c9a84c' }}>/ 5</span>
+                    </div>
+                  </>
+                ) : (
+                  <div className="stat-value">
+                    {s.value}
+                    {s.suffix && <span style={{ fontSize: '1.4rem', color: '#c9a84c' }}>{s.suffix}</span>}
+                  </div>
+                )}
                 <div className="stat-label">{s.label}</div>
               </div>
               {i < stats.length - 1 && (

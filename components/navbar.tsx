@@ -250,7 +250,7 @@ export function Navbar() {
 </div>
               <div>
                 <div className="logo-text">Mangrove Moments</div>
-                <div className="logo-sub">Paravur · Kollam</div>
+                <div className="logo-sub">Paravur · Varkala</div>
               </div>
             </Link>
 
@@ -299,20 +299,52 @@ export function Navbar() {
             {/* ── Mobile Hamburger ── */}
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
-                <button
-                  className="lg:hidden"
-                  style={{
-                    background: 'rgba(255,255,255,0.08)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                    borderRadius: '3px',
-                    width: 38, height: 38,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    color: '#fff', cursor: 'pointer',
-                  }}
-                >
-                  <Menu size={18} />
-                </button>
-              </SheetTrigger>
+  <button
+    className="lg:hidden"
+    style={{
+      background: 'rgba(255,255,255,0.08)',
+      border: '1px solid rgba(255,255,255,0.15)',
+      borderRadius: '3px',
+      width: 38, height: 38,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      color: '#fff', cursor: 'pointer',
+      position: 'relative',
+      overflow: 'hidden',
+      transition: 'border-color 0.3s, background 0.3s',
+      ...(mobileOpen ? {
+        borderColor: 'rgba(201,168,76,0.4)',
+        background: 'rgba(201,168,76,0.08)',
+      } : {}),
+    }}
+  >
+    {/* Hamburger lines */}
+    <span style={{
+      position: 'absolute',
+      display: 'flex', flexDirection: 'column',
+      alignItems: 'center', justifyContent: 'center',
+      gap: '5px',
+      transition: 'opacity 0.25s, transform 0.25s',
+      opacity: mobileOpen ? 0 : 1,
+      transform: mobileOpen ? 'rotate(90deg) scale(0.5)' : 'rotate(0deg) scale(1)',
+    }}>
+      <span style={{ width: 18, height: 1.5, background: '#fff', borderRadius: 2, display: 'block', transition: 'all 0.3s' }} />
+      <span style={{ width: 13, height: 1.5, background: '#fff', borderRadius: 2, display: 'block', transition: 'all 0.3s' }} />
+      <span style={{ width: 18, height: 1.5, background: '#fff', borderRadius: 2, display: 'block', transition: 'all 0.3s' }} />
+    </span>
+
+    {/* X icon */}
+    <span style={{
+      position: 'absolute',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      transition: 'opacity 0.25s, transform 0.25s',
+      opacity: mobileOpen ? 1 : 0,
+      transform: mobileOpen ? 'rotate(0deg) scale(1)' : 'rotate(-90deg) scale(0.5)',
+      color: '#c9a84c',
+    }}>
+      <X size={17} strokeWidth={2} />
+    </span>
+  </button>
+</SheetTrigger>
 
               <SheetContent side="left" className="mobile-drawer w-[300px] p-0">
                 <div className="flex flex-col h-full">
@@ -324,7 +356,7 @@ export function Navbar() {
                   }}>
                     <div>
                       <div className="logo-text">Mangrove Moments</div>
-                      <div className="logo-sub" style={{ marginTop: 4 }}>Paravur · Kollam</div>
+                      <div className="logo-sub" style={{ marginTop: 4 }}>Paravur · Varkala</div>
                     </div>
                     <button onClick={() => setMobileOpen(false)}
                       style={{ color: 'rgba(255,255,255,0.4)', background: 'none', border: 'none', cursor: 'pointer' }}>

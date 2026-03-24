@@ -245,7 +245,7 @@ export function FloatingButtons() {
               </div>
 
               <a
-                href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20book%20a%20kayaking%20experience%20at%20Paravur%20Backwaters."
+                href="https://wa.me/919744201662?text=Hi!%20I%20want%20to%20book%20a%20kayaking%20experience%20at%20Paravur%20Backwaters."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="wa-start-btn"
@@ -263,7 +263,7 @@ export function FloatingButtons() {
           <div style={{ position:'relative', display:'flex', alignItems:'center' }} className="fab-enter">
             {tooltip === 'ig' && <div className="fab-tooltip">Follow on Instagram</div>}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/varkala_mangrove_moments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="fab-btn"
