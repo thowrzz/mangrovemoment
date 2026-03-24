@@ -287,7 +287,7 @@ export function Navbar() {
 
             {/* ── Right CTAs ── */}
             <div className="hidden md:flex items-center gap-4">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-wa" aria-label="WhatsApp">
+              <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="btn-wa" aria-label="WhatsApp">
                 <MessageCircle size={16} />
               </a>
               <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.15)' }} />
@@ -410,7 +410,7 @@ export function Navbar() {
                     <button className="mobile-btn-book" onClick={() => scrollTo('contact')}>
                       Book Now
                     </button>
-                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+                    <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer"
                       style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
                         padding: '12px',

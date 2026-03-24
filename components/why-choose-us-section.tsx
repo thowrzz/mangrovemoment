@@ -404,7 +404,7 @@ export function WhyChooseUsSection() {
               Book Now
               <Star size={13} fill="#0d2415" color="#0d2415" />
             </button>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="cta-secondary">
+            <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="cta-secondary">
               <Phone size={13} />
               WhatsApp Us
             </a>

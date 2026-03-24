@@ -457,7 +457,7 @@ export function ActivitiesSection() {
           </p>
 
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="promo-wa-btn">
+            <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="promo-wa-btn">
               <MessageCircle size={15} />
               WhatsApp Us
             </a>

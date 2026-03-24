@@ -36,7 +36,7 @@ export function ContactSection() {
       formData.message ? `💬 *Message:* ${formData.message}` : '',
     ].filter(Boolean).join('\n')
 
-    const waNumber = '919876543210' // ← Replace with your real WhatsApp number
+    const waNumber = '919744201662' // ← Replace with your real WhatsApp number
     const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`
 
     // Opens WhatsApp with pre-filled booking message
@@ -334,7 +334,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="info-title">Phone</div>
-                  <a href="tel:+919876543210" className="info-value">+91 98765 43210</a>
+                  <a href="tel:+919895023973" className="info-value">+91 98765 43210</a>
                 </div>
               </div>
 
@@ -536,7 +536,7 @@ export function ContactSection() {
 
             {/* WhatsApp strip inside panel */}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919895023973"
               target="_blank"
               rel="noopener noreferrer"
               className="wa-strip"

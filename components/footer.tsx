@@ -21,7 +21,7 @@ const activityLinks = [
 const socials = [
   { href: 'https://www.instagram.com/varkala_mangrove_moments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: Instagram, label: 'Instagram' },
   { href: 'https://youtube.com', icon: Youtube, label: 'YouTube' },
-  { href: 'https://wa.me/919876543210', icon: MessageCircle, label: 'WhatsApp' },
+  { href: 'https://wa.me/919744201662', icon: MessageCircle, label: 'WhatsApp' },
 ]
 
 export function Footer() {
@@ -200,7 +200,7 @@ export function Footer() {
             <ArrowUpRight size={13} />
           </a>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919744201662"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -330,7 +330,7 @@ export function Footer() {
 
             <div className="ft-contact-item" style={{ marginTop: 4 }}>
               <MessageCircle size={14} color="rgba(201,168,76,0.5)" strokeWidth={1.5} style={{ flexShrink: 0 }} />
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="ft-contact-text">
+              <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="ft-contact-text">
                 Chat on WhatsApp
               </a>
             </div>
