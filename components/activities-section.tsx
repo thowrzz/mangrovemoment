@@ -23,7 +23,7 @@ const activities = [
     tag: 'Best Value',
     tagColor: '#4caf82',
     description: 'Paddle silently through narrow mangrove tunnels with a local guide. Perfect for nature lovers and first-timers.',
-    image: './kayaking.png',
+    image: './Kayaking.png',
     icon: '🛶',
   },
   {
@@ -67,7 +67,7 @@ const activities = [
     tag: 'Premium',
     tagColor: '#8e4cc9',
     description: "Feel the rush as you tear across Paravur Lake at full speed. Perfect for groups who want the ultimate water thrill.",
-    image: 'boat.png',
+    image: './boat.png',
     icon: '🚤',
   },
 ]
