@@ -314,7 +314,7 @@ export function Navbar() {
                 </button>
               </SheetTrigger>
 
-              <SheetContent side="right" className="mobile-drawer w-[300px] p-0">
+              <SheetContent side="left" className="mobile-drawer w-[300px] p-0">
                 <div className="flex flex-col h-full">
                   {/* Drawer header */}
                   <div style={{
