@@ -291,9 +291,12 @@ export function Navbar() {
                 <MessageCircle size={16} />
               </a>
               <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.15)' }} />
-              <button className="btn-book" onClick={() => scrollTo('contact')}>
+              <a             href="https://wa.me/919744201662?text=Hi!%20I%20would%20like%20to%20book%20an%20experience%20at%20Paravur%20Backwaters."
+>
+              <button className="btn-book" >
                 Book Now
               </button>
+              </a>
             </div>
 
             {/* ── Mobile Hamburger ── */}
@@ -407,9 +410,11 @@ export function Navbar() {
 
                   {/* Drawer footer */}
                   <div style={{ padding: '20px 28px', borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <a             href="https://wa.me/919744201662?text=Hi!%20I%20would%20like%20to%20book%20an%20experience%20at%20Paravur%20Backwaters.">
                     <button className="mobile-btn-book" onClick={() => scrollTo('contact')}>
                       Book Now
                     </button>
+                    </a>
                     <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer"
                       style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,

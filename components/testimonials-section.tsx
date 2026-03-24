@@ -283,7 +283,7 @@ export function TestimonialsSection() {
         {/* ── Trust bar ── */}
         <div className="trust-bar">
           {[
-            { value: '4.9 ★', label: 'Average Rating' },
+            { value: '5 ★', label: 'Average Rating' },
             { value: '100%', label: 'Recommend Us' },
             { value: '500+', label: 'Reviews' },
             { value: 'Zero', label: 'Complaints' },

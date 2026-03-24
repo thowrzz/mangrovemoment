@@ -50,13 +50,13 @@ const features = [
 // ★ CHANGED: "6 Experiences" → "100% Safety", "4yr" → "4yr" (visible), star rating added
 const stats = [
   { value: '500+', label: 'Happy Guests' },
-  { value: '4.9', label: 'Star Rating', isStars: true },
+  { value: '5', label: 'Star Rating', isStars: true },
   { value: '100%', label: 'Safety Record' },
   { value: '4', label: 'Years Running', suffix: 'yr' },
 ]
 
 // Star Rating Component — renders 5 stars with 4.9 fill
-function StarRating({ score = 4.9 }: { score?: number }) {
+function StarRating({ score = 5 }: { score?: number }) {
   return (
     <div style={{ display: 'flex', gap: '3px', justifyContent: 'center', marginBottom: '6px' }}>
       {[1, 2, 3, 4, 5].map((s) => {
@@ -331,9 +331,9 @@ export function WhyChooseUsSection() {
                 {/* ★ Star rating gets its own visual treatment */}
                 {s.isStars ? (
                   <>
-                    <StarRating score={4.9} />
+                    <StarRating score={5} />
                     <div className="stat-value" style={{ fontSize: '1.6rem', marginBottom: '4px' }}>
-                      4.9 <span style={{ fontSize: '1rem', color: '#c9a84c' }}>/ 5</span>
+                      5 <span style={{ fontSize: '1rem', color: '#c9a84c' }}>/ 5</span>
                     </div>
                   </>
                 ) : (

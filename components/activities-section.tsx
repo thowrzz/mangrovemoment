@@ -405,7 +405,6 @@ export function ActivitiesSection() {
           ))}
         </div>
 
-        {/* ── Promo Banner ── */}
         <div className="promo-banner" style={{ padding: '56px 40px', textAlign: 'center' }}>
           {/* Decorative corners */}
           <div style={{ position: 'absolute', top: 20, left: 20, width: 32, height: 32, borderTop: '1px solid rgba(201,168,76,0.4)', borderLeft: '1px solid rgba(201,168,76,0.4)' }} />

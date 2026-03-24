@@ -560,7 +560,7 @@ export function ContactSection() {
       </div>
 
       {/* ── Footer bar ── */}
-      <div className="footer-bar">
+      {/* <div className="footer-bar">
         <div style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: '1rem',
@@ -579,7 +579,7 @@ export function ContactSection() {
         }}>
           Designed with 🌿 for Kerala's backwaters
         </div>
-      </div>
+      </div> */}
 
       <style>{`
         @media (max-width: 768px) {
