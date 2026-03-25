@@ -13,24 +13,40 @@ export function HeroSection() {
     const timer = setTimeout(() => setLoaded(true), 120)
 
     const vid = videoRef.current
-    if (vid) {
-      // If already buffered (e.g. cached), fire immediately
-      if (vid.readyState >= 3) {
-        setVideoReady(true)
-      } else {
-        const onCanPlay = () => setVideoReady(true)
-        vid.addEventListener('canplaythrough', onCanPlay, { once: true })
-        // Fallback: reveal video after 1.5s even if not fully buffered
-        const fallback = setTimeout(() => setVideoReady(true), 1500)
-        return () => {
-          clearTimeout(timer)
-          clearTimeout(fallback)
-          vid.removeEventListener('canplaythrough', onCanPlay)
-        }
-      }
+    if (!vid) return () => clearTimeout(timer)
+
+    // Imperatively call play() — most reliable way to trigger autoplay on
+    // mobile browsers (iOS Safari, Android Chrome) that ignore the autoPlay attr
+    const tryPlay = () => {
+      vid.play().catch(() => {
+        // Autoplay blocked — video stays hidden, poster shows instead
+      })
     }
 
-    return () => clearTimeout(timer)
+    const onCanPlay = () => {
+      setVideoReady(true)
+      tryPlay()
+    }
+
+    // Already buffered (cached visit)
+    if (vid.readyState >= 3) {
+      setVideoReady(true)
+      tryPlay()
+    } else {
+      vid.addEventListener('canplay', onCanPlay, { once: true })
+    }
+
+    // Fallback: reveal video after 1.8s regardless
+    const fallback = setTimeout(() => {
+      setVideoReady(true)
+      tryPlay()
+    }, 1800)
+
+    return () => {
+      clearTimeout(timer)
+      clearTimeout(fallback)
+      vid.removeEventListener('canplay', onCanPlay)
+    }
   }, [])
 
   const scrollToActivities = () => {
@@ -178,12 +194,14 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          preload="auto"            // start downloading immediately
+          // @ts-ignore — webkit-playsinline needed for older iOS Safari
+          webkit-playsinline="true"
+          x5-playsinline="true"
+          preload="auto"
           className={`hero-video absolute inset-0 w-full h-full object-cover ${videoReady ? 'video-ready' : ''}`}
-          poster="/poster.webp"     // swap in a real first-frame poster for instant preview
-          fetchPriority="high"      // ask browser to prioritise this resource
+          poster="/poster.webp"
+          fetchPriority="high"
         >
-          {/* Serve WebM first — typically 30-50% smaller than MP4 */}
           <source src="./bg.webm" type="video/webm" />
           <source src="./bg.mp4"  type="video/mp4" />
         </video>
