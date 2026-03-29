@@ -361,7 +361,7 @@ export function ActivitiesSection() {
                   zIndex: 2,
                 }}>
                   <span style={{ fontSize: '1.6rem' }}>{activity.icon}</span>
-                  <div style={{
+                  {/* <div style={{
                     background: 'rgba(0,0,0,0.55)',
                     backdropFilter: 'blur(8px)',
                     padding: '4px 12px',
@@ -373,7 +373,7 @@ export function ActivitiesSection() {
                     <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.65rem', fontFamily: "'Jost', sans-serif", marginLeft: 3 }}>
                       /person
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

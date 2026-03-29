@@ -124,7 +124,7 @@ export function ContactSection() {
           margin-bottom: 5px;
         }
         .info-value {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Jost', serif;
           font-size: 1.05rem;
           font-weight: 400;
           color: #0d2415;

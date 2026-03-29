@@ -13,19 +13,15 @@ export function HeroSection() {
     const vid = videoRef.current
     if (!vid) return
 
-    vid.muted = true // must be set in JS too, not just as attr, for iOS
+    vid.muted = true
     vid.load()
 
     const tryPlay = () => {
       vid.play().catch(() => {})
     }
 
-    // First attempt — works on desktop and most Android
     tryPlay()
 
-    // iOS Safari autoplay is blocked unless triggered by user gesture.
-    // We listen to the first touch/scroll and silently start the video.
-    // User won't notice — it feels instant.
     const unlockOnGesture = () => {
       tryPlay()
       document.removeEventListener('touchstart', unlockOnGesture)
@@ -100,8 +96,8 @@ export function HeroSection() {
         .stat-divider { width:1px; height:32px; background:rgba(255,255,255,.2); }
         .location-badge {
           display:inline-flex; align-items:center; gap:6px;
-          background:rgba(255,255,255,.08); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-          border:1px solid rgba(255,255,255,.15); border-radius:2px; padding:7px 16px;
+          background:rgba(0,0,0,.40); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+          border:1px solid rgba(255,255,255,.2); border-radius:2px; padding:7px 16px;
         }
         .scroll-line {
           width:1px; height:48px;
@@ -109,8 +105,7 @@ export function HeroSection() {
           margin:0 auto 8px; animation:scrollPulse 2s ease-in-out infinite;
         }
         @keyframes scrollPulse { 0%,100%{opacity:.4;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.1)} }
-        .corner-tl,.corner-br { position:absolute; width:40px; height:40px; pointer-events:none; }
-        .corner-tl { top:24px; left:24px; border-top:1.5px solid rgba(201,168,76,.5); border-left:1.5px solid rgba(201,168,76,.5); }
+        .corner-br { position:absolute; width:40px; height:40px; pointer-events:none; }
         .corner-br { bottom:24px; right:24px; border-bottom:1.5px solid rgba(201,168,76,.5); border-right:1.5px solid rgba(201,168,76,.5); }
         .vignette { background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.65) 100%); }
       `}</style>
@@ -136,7 +131,7 @@ export function HeroSection() {
           <source src="./bg.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/55" />
         <div className="absolute inset-0 vignette" />
         <div className="absolute bottom-0 left-0 right-0 h-40"
           style={{ background: 'linear-gradient(to top,rgba(8,24,14,.9),transparent)' }} />
@@ -144,7 +139,6 @@ export function HeroSection() {
           style={{ background: 'linear-gradient(to bottom,rgba(0,0,0,.3),transparent)' }} />
       </div>
 
-      <div className="corner-tl" />
       <div className="corner-br" />
 
       {/* ── Main Content ── */}
@@ -152,8 +146,8 @@ export function HeroSection() {
 
         <div className="hero-label mb-8 flex justify-center">
           <div className="location-badge">
-            <MapPin size={11} color="#c9a84c" />
-            <span style={{ fontFamily:"'Jost',sans-serif", fontSize:'.7rem', fontWeight:500, letterSpacing:'.18em', textTransform:'uppercase', color:'#c9a84c' }}>
+            <MapPin size={11} color="#ffffff" />
+            <span style={{ fontFamily:"'Jost',sans-serif", fontSize:'.7rem', fontWeight:500, letterSpacing:'.18em', textTransform:'uppercase', color:'#ffffff' }}>
               Paravur Backwaters · Varkala · Kerala
             </span>
           </div>
@@ -170,7 +164,7 @@ export function HeroSection() {
 
         <div className="hero-sub flex items-center justify-center gap-4 mb-5">
           <div style={{ height:'1px', width:'40px', background:'rgba(201,168,76,.5)' }} />
-          <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'.95rem', fontWeight:300, color:'rgba(255,255,255,.75)', letterSpacing:'.04em' }}>
+          <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'1.05rem', fontWeight:400, color:'#ffffff', letterSpacing:'.06em', textShadow:'0 1px 12px rgba(0,0,0,.8)' }}>
             Just 20 minutes from Varkala — 7+ unique water experiences
           </p>
           <div style={{ height:'1px', width:'40px', background:'rgba(201,168,76,.5)' }} />
