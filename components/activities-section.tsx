@@ -77,7 +77,9 @@ export function ActivitiesSection() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
 
   const bookOnWhatsApp = (activityName: string) => {
-    const message = encodeURIComponent(`Hi! I'd like to book the *${activityName}* experience. Please share availability and details.`)
+    const message = encodeURIComponent(
+      `Hi! I'd like to book the *${activityName}* experience. Please share availability and details.`
+    )
     window.open(`https://wa.me/919744201662?text=${message}`, '_blank')
   }
 
@@ -110,8 +112,6 @@ export function ActivitiesSection() {
         .act-card:hover .act-img {
           transform: scale(1.06);
         }
-
-        /* Book Now button — card hover nudge */
         .act-card:hover .act-book-btn .book-btn-arrow {
           transform: translateX(3px);
         }
@@ -171,7 +171,6 @@ export function ActivitiesSection() {
           text-transform: uppercase;
         }
 
-        /* ── NEW Book Now Button ── */
         .act-book-btn {
           font-family: 'Jost', sans-serif;
           font-size: 0.68rem;
@@ -200,16 +199,6 @@ export function ActivitiesSection() {
           color: #0d2415 !important;
         }
 
-        .book-btn-left {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .book-btn-dot {
-          display: none;
-        }
-
         .book-btn-arrow {
           transition: transform 0.25s;
           color: #c9a84c;
@@ -232,64 +221,67 @@ export function ActivitiesSection() {
           line-height: 1.12;
         }
 
-        .promo-banner {
-          background: linear-gradient(135deg, #0d2415 0%, #1a3c2e 50%, #0d2415 100%);
-          position: relative;
-          overflow: hidden;
-        }
-        .promo-banner::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-        }
-
+        /* ── PROMO BANNER BUTTONS — fully self-contained ── */
         .promo-wa-btn {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 10px;
           font-family: 'Jost', sans-serif;
-          font-size: 0.72rem;
+          font-size: 0.82rem;
           font-weight: 600;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.14em;
           text-transform: uppercase;
           background: #25d366;
-          color: #fff;
+          color: #ffffff !important;
           border: none;
-          padding: 13px 28px;
+          padding: 16px 36px;
           cursor: pointer;
-          clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-          transition: all 0.3s;
+          border-radius: 3px;
+          transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
           text-decoration: none;
+          box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+          position: relative;
+          z-index: 2;
         }
         .promo-wa-btn:hover {
           background: #1ebe5a;
-          box-shadow: 0 8px 24px rgba(37,211,102,0.35);
-          transform: translateY(-1px);
+          box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+          transform: translateY(-2px);
+          color: #ffffff !important;
+        }
+        .promo-wa-btn:active {
+          transform: translateY(0);
         }
 
         .promo-book-btn {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 10px;
           font-family: 'Jost', sans-serif;
-          font-size: 0.72rem;
+          font-size: 0.82rem;
           font-weight: 600;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.14em;
           text-transform: uppercase;
           background: transparent;
-          color: #fff;
-          border: 1px solid rgba(255,255,255,0.3);
-          padding: 13px 28px;
+          color: #ffffff !important;
+          border: 2px solid rgba(255,255,255,0.8);
+          padding: 14px 34px;
           cursor: pointer;
-          clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-          transition: all 0.3s;
+          border-radius: 3px;
+          transition: background 0.3s, transform 0.2s, border-color 0.3s, box-shadow 0.3s;
           text-decoration: none;
+          position: relative;
+          z-index: 2;
         }
         .promo-book-btn:hover {
-          background: rgba(255,255,255,0.08);
-          border-color: rgba(255,255,255,0.6);
-          transform: translateY(-1px);
+          background: rgba(255,255,255,0.15);
+          border-color: #ffffff;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+          color: #ffffff !important;
+        }
+        .promo-book-btn:active {
+          transform: translateY(0);
         }
 
         .divider-line {
@@ -321,7 +313,7 @@ export function ActivitiesSection() {
             lineHeight: 1.7,
           }}>
             Premium eco-experiences on Paravur Lake —<br />
-            group discounts & homestay packages available
+            group discounts &amp; homestay packages available
           </p>
         </div>
 
@@ -343,25 +335,20 @@ export function ActivitiesSection() {
                   className="act-img"
                   style={{ objectFit: 'cover' }}
                 />
-                {/* Gradient overlay on image */}
                 <div style={{
                   position: 'absolute', inset: 0,
                   background: 'linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 60%)',
                 }} />
-
-                {/* Tag */}
                 <div className="act-tag" style={{ background: activity.tagColor }}>
                   {activity.tag}
                 </div>
-
-                {/* Icon + price overlay at bottom of image */}
                 <div style={{
                   position: 'absolute', bottom: 14, left: 14, right: 14,
                   display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
                   zIndex: 2,
                 }}>
                   <span style={{ fontSize: '1.6rem' }}>{activity.icon}</span>
-                  {/* <div style={{
+                  <div style={{
                     background: 'rgba(0,0,0,0.55)',
                     backdropFilter: 'blur(8px)',
                     padding: '4px 12px',
@@ -373,13 +360,12 @@ export function ActivitiesSection() {
                     <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.65rem', fontFamily: "'Jost', sans-serif", marginLeft: 3 }}>
                       /person
                     </span>
-                  </div> */}
+                  </div>
                 </div>
               </div>
 
               {/* Card Body */}
               <div style={{ padding: '20px 20px 20px' }}>
-                {/* Name + duration */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                   <h3 className="act-name">{activity.name}</h3>
                   <span className="act-duration">
@@ -387,17 +373,11 @@ export function ActivitiesSection() {
                     {activity.duration}
                   </span>
                 </div>
-
-                {/* Description */}
                 <p className="act-desc" style={{ marginBottom: '20px' }}>
                   {activity.description}
                 </p>
-
-                {/* ── NEW Book Now Button ── */}
                 <button className="act-book-btn" onClick={() => bookOnWhatsApp(activity.name)}>
-                  <span className="book-btn-left">
-                    Book Now
-                  </span>
+                  Book Now
                   <ArrowRight size={13} className="book-btn-arrow" />
                 </button>
               </div>
@@ -405,67 +385,123 @@ export function ActivitiesSection() {
           ))}
         </div>
 
-        <div className="promo-banner" style={{ padding: '56px 40px', textAlign: 'center' }}>
-          {/* Decorative corners */}
-          <div style={{ position: 'absolute', top: 20, left: 20, width: 32, height: 32, borderTop: '1px solid rgba(201,168,76,0.4)', borderLeft: '1px solid rgba(201,168,76,0.4)' }} />
-          <div style={{ position: 'absolute', bottom: 20, right: 20, width: 32, height: 32, borderBottom: '1px solid rgba(201,168,76,0.4)', borderRight: '1px solid rgba(201,168,76,0.4)' }} />
-
-          {/* Group icon */}
+        {/* ── PROMO BANNER ── position:relative is HERE on the wrapper, not the section ── */}
+        <div
+          style={{
+            position: 'relative',
+            overflow: 'hidden',
+            background: 'linear-gradient(135deg, #0d2415 0%, #1a3c2e 50%, #0d2415 100%)',
+            borderRadius: '4px',
+            padding: '64px 40px',
+            textAlign: 'center',
+          }}
+        >
+          {/* Subtle pattern overlay */}
           <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(201,168,76,0.12)',
-            border: '1px solid rgba(201,168,76,0.25)',
-            padding: '6px 16px',
-            marginBottom: '20px',
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            pointerEvents: 'none',
+          }} />
+
+          {/* Decorative corner accents */}
+          <div style={{
+            position: 'absolute', top: 20, left: 20, width: 32, height: 32,
+            borderTop: '2px solid rgba(201,168,76,0.6)',
+            borderLeft: '2px solid rgba(201,168,76,0.6)',
+            pointerEvents: 'none',
+          }} />
+          <div style={{
+            position: 'absolute', bottom: 20, right: 20, width: 32, height: 32,
+            borderBottom: '2px solid rgba(201,168,76,0.6)',
+            borderRight: '2px solid rgba(201,168,76,0.6)',
+            pointerEvents: 'none',
+          }} />
+
+          {/* Group badge */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+            background: 'rgba(201,168,76,0.2)',
+            border: '1.5px solid rgba(201,168,76,0.5)',
+            padding: '8px 18px',
+            marginBottom: '28px',
+            borderRadius: '3px',
+            position: 'relative',
+            zIndex: 2,
           }}>
-            <Users size={13} color="#c9a84c" />
+            <Users size={15} color="#e8d49a" />
             <span style={{
               fontFamily: "'Jost', sans-serif",
-              fontSize: '0.65rem',
-              fontWeight: 500,
-              letterSpacing: '0.18em',
+              fontSize: '0.7rem',
+              fontWeight: 600,
+              letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#c9a84c',
+              color: '#e8d49a',
             }}>
-              Groups & Bulk Bookings
+              Groups &amp; Bulk Bookings
             </span>
           </div>
 
+          {/* Heading */}
           <h3 style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
-            fontWeight: 300,
-            color: '#fff',
-            marginBottom: '12px',
-            lineHeight: 1.2,
+            fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
+            fontWeight: 400,
+            color: '#ffffff',
+            marginBottom: '16px',
+            lineHeight: 1.3,
+            position: 'relative',
+            zIndex: 2,
           }}>
-            School Trips, Family Groups &{' '}
-            <em style={{ fontStyle: 'italic', color: '#e8d49a' }}>Corporate Outings</em>
+            School Trips, Family Groups &amp;{' '}
+            <em style={{ fontStyle: 'italic', color: '#f4e5a8', fontWeight: 300 }}>Corporate Outings</em>
           </h3>
 
+          {/* Subtext */}
           <p style={{
             fontFamily: "'Jost', sans-serif",
-            fontSize: '0.85rem',
-            fontWeight: 300,
-            color: 'rgba(255,255,255,0.65)',
-            marginBottom: '32px',
-            lineHeight: 1.7,
+            fontSize: '0.95rem',
+            fontWeight: 400,
+            color: 'rgba(255,255,255,0.85)',
+            marginBottom: '40px',
+            lineHeight: 1.8,
+            maxWidth: '600px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            position: 'relative',
+            zIndex: 2,
           }}>
             Special discounts for groups of 10+ · Homestay arrangements on request<br />
             Call or WhatsApp to get a custom quote for your group
           </p>
 
-          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="promo-wa-btn">
-              <MessageCircle size={15} />
+          {/* CTA Buttons */}
+          <div style={{
+            display: 'flex',
+            gap: '16px',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            position: 'relative',
+            zIndex: 2,
+          }}>
+            <a
+              href="https://wa.me/919744201662"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="promo-wa-btn"
+            >
+              <MessageCircle size={16} />
               WhatsApp Us
             </a>
             <button className="promo-book-btn" onClick={scrollToContact}>
-              <Zap size={14} />
+              <Zap size={15} />
               Get a Quote
             </button>
           </div>
         </div>
+
       </div>
     </section>
   )
