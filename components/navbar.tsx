@@ -14,12 +14,12 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { FaPersonSwimming } from 'react-icons/fa6'
 import { GiBoatFishing, GiWaterSplash } from 'react-icons/gi'
 import { MdDirectionsBike, MdSpeed,MdRowing  } from 'react-icons/md'
-import { TbMotorbike } from 'react-icons/tb'
+import { TbMotorbike,TbStretching  } from 'react-icons/tb'
 
 const activities = [
   { label: 'Country Boating', icon: Sailboat },         // Rowing boat activity
   { label: 'Kayaking', icon: MdRowing  },            // Boat/kayaking
-  { label: 'Stand Up Paddle', icon: FaPersonSwimming },  // Water sport activity
+  { label: 'Stand Up Paddle', icon: TbStretching  },  // Water sport activity
   { label: 'Coracle Ride', icon: GiWaterSplash },        // Water activity
   { label: 'ATV Ride', icon: TbMotorbike },              // ATV/motorbike
   { label: 'Speed Boat', icon: MdSpeed },                // Speed activity
