@@ -503,6 +503,7 @@ export function ActivitiesSection() {
         </div>
 
       </div>
+      
     </section>
   )
 }
