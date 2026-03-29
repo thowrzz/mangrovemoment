@@ -7,68 +7,74 @@ const activities = [
   {
     id: 1,
     name: 'Country Boating',
-    duration: '2 – 2.5 hrs',
-    price: '₹1,800',
+    duration: '1 hr 15 min',
+    price: '₹1,700',
     tag: 'Most Popular',
     tagColor: '#c9a84c',
     description: 'Glide through ancient mangrove channels on a traditional wooden country boat. The most immersive way to experience Paravur backwaters.',
     image: './countryboating.png',
     icon: '⛵',
+    note: 'Pre-booking only · 1–2 persons · +₹250/extra pax',
   },
   {
     id: 2,
     name: 'Kayaking',
-    duration: '2 – 2.5 hrs',
-    price: '₹550',
+    duration: '2 hrs',
+    price: '₹700',
     tag: 'Best Value',
     tagColor: '#4caf82',
     description: 'Paddle silently through narrow mangrove tunnels with a local guide. Perfect for nature lovers and first-timers.',
     image: './Kayaking.png',
     icon: '🛶',
+    note: 'Per person · guided experience',
   },
   {
     id: 3,
     name: 'Stand Up Paddle',
-    duration: '2 – 2.5 hrs',
-    price: '₹600',
+    duration: '2 hrs',
+    price: '₹1,000',
     tag: 'Fun & Easy',
     tagColor: '#4c8ec9',
     description: 'Balance on the glassy backwaters and soak in stunning lake views. No experience needed — our guides ensure a great time.',
     image: './standup.png',
     icon: '🏄',
+    note: 'Per person',
   },
   {
     id: 4,
     name: 'Coracle Ride',
     duration: '15 min',
-    price: '₹400',
+    price: '₹300',
     tag: 'Unique to Kerala',
     tagColor: '#c97a4c',
     description: "Spin and drift in a traditional round basket boat — a centuries-old Kerala tradition that's pure joy for all ages.",
     image: './coracleRide.jpg',
     icon: '🪵',
+    note: 'Per person · min. 2 persons required',
   },
   {
     id: 5,
     name: 'ATV Ride',
-    duration: '15 – 20 min',
-    price: '₹350',
+    duration: '1 round',
+    price: '₹300',
     tag: 'Adrenaline',
     tagColor: '#c94c4c',
     description: 'Rev up on rugged terrain beside the backwaters. A short but thrilling off-road adventure to get the heart pumping.',
     image: './avtride.png',
     icon: '🏍️',
+    note: 'Per person',
   },
   {
     id: 6,
     name: 'Speed Boat',
-    duration: 'Variable',
+    duration: '30 min',
     price: '₹3,500',
     tag: 'Premium',
     tagColor: '#8e4cc9',
     description: "Feel the rush as you tear across Paravur Lake at full speed. Perfect for groups who want the ultimate water thrill.",
     image: './boat.png',
     icon: '🚤',
+    note: '1–5 persons per ride',
   },
 ]
 
@@ -503,7 +509,7 @@ export function ActivitiesSection() {
         </div>
 
       </div>
-      
+
     </section>
   )
 }
