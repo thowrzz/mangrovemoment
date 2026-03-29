@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, MessageCircle, ChevronDown, X } from 'lucide-react'
+import { Menu, MessageCircle, ChevronDown, X, Sailboat, Waves, Activity, CircleDot, Bike, Zap } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,15 +11,19 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
-const activities = [
-  { label: 'Country Boating', icon: '⛵' },
-  { label: 'Kayaking', icon: '🛶' },
-  { label: 'Stand Up Paddle', icon: '🏄' },
-  { label: 'Coracle Ride', icon: '🪵' },
-  { label: 'ATV Ride', icon: '🏍️' },
-  { label: 'Speed Boat', icon: '🚤' },
-]
+import { FaPersonSwimming } from 'react-icons/fa6'
+import { GiBoatFishing, GiWaterSplash } from 'react-icons/gi'
+import { MdDirectionsBike, MdSpeed,MdRowing  } from 'react-icons/md'
+import { TbMotorbike } from 'react-icons/tb'
 
+const activities = [
+  { label: 'Country Boating', icon: Sailboat },         // Rowing boat activity
+  { label: 'Kayaking', icon: MdRowing  },            // Boat/kayaking
+  { label: 'Stand Up Paddle', icon: FaPersonSwimming },  // Water sport activity
+  { label: 'Coracle Ride', icon: GiWaterSplash },        // Water activity
+  { label: 'ATV Ride', icon: TbMotorbike },              // ATV/motorbike
+  { label: 'Speed Boat', icon: MdSpeed },                // Speed activity
+]
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#activities', label: 'Activities' },
@@ -68,14 +72,14 @@ export function Navbar() {
         .logo-text {
           font-family: 'Cormorant Garamond', serif;
           font-weight: 700;
-          font-size: 1.55rem;
+          font-size: 1.65rem;
           letter-spacing: 0.01em;
           color: #fff;
           line-height: 1;
         }
         .logo-sub {
           font-family: 'Jost', sans-serif;
-          font-size: 0.65rem;
+          font-size: 0.7rem;
           font-weight: 400;
           letter-spacing: 0.22em;
           text-transform: uppercase;
@@ -84,12 +88,12 @@ export function Navbar() {
           margin-top: 8px;
         }
 
-        /* Nav links - IMPROVED VISIBILITY */
+        /* Nav links - INCREASED SIZE */
         .nav-link {
           position: relative;
-          font-size: 0.75rem;
+          font-size: 0.85rem;
           font-weight: 500;
-          letter-spacing: 0.14em;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           color: rgba(255,255,255,0.95);
           transition: color 0.25s;
@@ -99,7 +103,7 @@ export function Navbar() {
           border: none;
           display: inline-flex;
           align-items: center;
-          gap: 4px;
+          gap: 5px;
         }
         .nav-link::after {
           content: '';
@@ -116,17 +120,17 @@ export function Navbar() {
           width: 100%;
         }
 
-        /* Book button */
+        /* Book button - INCREASED SIZE */
         .btn-book {
           font-family: 'Jost', sans-serif;
-          font-size: 0.68rem;
+          font-size: 0.75rem;
           font-weight: 600;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           background: linear-gradient(135deg, #c9a84c, #e8c97a, #c9a84c);
           color: #0d2415;
           border: none;
-          padding: 9px 22px;
+          padding: 10px 24px;
           cursor: pointer;
           clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%);
           transition: all 0.3s ease;
@@ -144,7 +148,7 @@ export function Navbar() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 34px; height: 34px;
+          width: 36px; height: 36px;
           border-radius: 50%;
           border: 1px solid rgba(255,255,255,0.2);
           color: rgba(255,255,255,0.7);
@@ -157,29 +161,29 @@ export function Navbar() {
           background: rgba(37,211,102,0.08);
         }
 
-        /* Dropdown - IMPROVED VISIBILITY */
+        /* Dropdown - INCREASED SIZE */
         .activity-dropdown {
           background: rgba(8,24,14,0.98) !important;
           border: 1px solid rgba(201,168,76,0.25) !important;
           backdrop-filter: blur(24px);
           border-radius: 6px;
           padding: 8px;
-          min-width: 220px;
+          min-width: 240px;
           box-shadow: 0 8px 32px rgba(0,0,0,0.4);
         }
         .activity-item {
           font-family: 'Jost', sans-serif;
-          font-size: 0.8rem !important;
+          font-size: 0.875rem !important;
           font-weight: 500 !important;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.04em;
           color: rgba(255,255,255,0.92) !important;
-          padding: 11px 16px !important;
+          padding: 12px 18px !important;
           border-radius: 4px;
           transition: all 0.2s;
           cursor: pointer;
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 14px;
         }
         .activity-item:hover {
           background: rgba(201,168,76,0.18) !important;
@@ -191,20 +195,20 @@ export function Navbar() {
           outline: none;
         }
 
-        /* Mobile drawer - IMPROVED VISIBILITY */
+        /* Mobile drawer - INCREASED SIZE */
         .mobile-drawer {
           background: #06160d !important;
           border-left: 1px solid rgba(201,168,76,0.15) !important;
         }
         .mobile-link {
           font-family: 'Jost', sans-serif;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           font-weight: 500;
-          letter-spacing: 0.16em;
+          letter-spacing: 0.14em;
           text-transform: uppercase;
           color: rgba(255,255,255,0.85);
           transition: color 0.2s;
-          padding: 14px 0;
+          padding: 15px 0;
           border-bottom: 1px solid rgba(255,255,255,0.05);
           display: block;
           cursor: pointer;
@@ -216,10 +220,10 @@ export function Navbar() {
         .mobile-activity-link {
           display: flex;
           align-items: center;
-          gap: 12px;
-          padding: 10px 0;
+          gap: 14px;
+          padding: 12px 0;
           font-family: 'Jost', sans-serif;
-          font-size: 0.85rem;
+          font-size: 0.9rem;
           font-weight: 400;
           color: rgba(255,255,255,0.8);
           text-decoration: none;
@@ -231,14 +235,14 @@ export function Navbar() {
 
         .mobile-btn-book {
           font-family: 'Jost', sans-serif;
-          font-size: 0.72rem;
+          font-size: 0.78rem;
           font-weight: 600;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           background: linear-gradient(135deg, #c9a84c, #e8c97a);
           color: #0d2415;
           border: none;
-          padding: 14px;
+          padding: 15px;
           width: 100%;
           cursor: pointer;
           clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
@@ -252,6 +256,11 @@ export function Navbar() {
           border-radius: 50%;
           background: #c9a84c;
           display: inline-block;
+        }
+
+        .activity-icon {
+          color: #c9a84c;
+          flex-shrink: 0;
         }
       `}</style>
 
@@ -291,18 +300,21 @@ export function Navbar() {
                       <DropdownMenuTrigger asChild>
                         <button className="nav-link">
                           {link.label}
-                          <ChevronDown size={12} style={{ opacity: 0.7 }} />
+                          <ChevronDown size={14} style={{ opacity: 0.7 }} />
                         </button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="activity-dropdown" align="center" sideOffset={12}>
-                        {activities.map((a) => (
-                          <DropdownMenuItem key={a.label} className="activity-item" asChild>
-                            <Link href="#activities" style={{ textDecoration: 'none' }}>
-                              <span style={{ fontSize: '1.1rem' }}>{a.icon}</span>
-                              <span>{a.label}</span>
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
+                        {activities.map((a) => {
+                          const IconComponent = a.icon
+                          return (
+                            <DropdownMenuItem key={a.label} className="activity-item" asChild>
+                              <Link href="#activities" style={{ textDecoration: 'none' }}>
+                                <IconComponent size={18} className="activity-icon" />
+                                <span>{a.label}</span>
+                              </Link>
+                            </DropdownMenuItem>
+                          )
+                        })}
                       </DropdownMenuContent>
                     </DropdownMenu>
                   )
@@ -318,7 +330,7 @@ export function Navbar() {
             {/* ── Right CTAs ── */}
             <div className="hidden md:flex items-center gap-4">
               <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="btn-wa" aria-label="WhatsApp">
-                <MessageCircle size={16} />
+                <MessageCircle size={17} />
               </a>
               <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.15)' }} />
               <a 
@@ -413,17 +425,20 @@ export function Navbar() {
                               Activities
                             </div>
                             <div style={{ paddingLeft: 12, borderLeft: '1px solid rgba(201,168,76,0.3)', marginBottom: 8, marginTop: 4 }}>
-                              {activities.map((a) => (
-                                <Link 
-                                  key={a.label} 
-                                  href="#activities"
-                                  onClick={() => setMobileOpen(false)}
-                                  className="mobile-activity-link"
-                                >
-                                  <span style={{ fontSize: '1.1rem' }}>{a.icon}</span>
-                                  <span>{a.label}</span>
-                                </Link>
-                              ))}
+                              {activities.map((a) => {
+                                const IconComponent = a.icon
+                                return (
+                                  <Link 
+                                    key={a.label} 
+                                    href="#activities"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="mobile-activity-link"
+                                  >
+                                    <IconComponent size={18} className="activity-icon" />
+                                    <span>{a.label}</span>
+                                  </Link>
+                                )
+                              })}
                             </div>
                           </div>
                         )
@@ -458,12 +473,12 @@ export function Navbar() {
                       rel="noopener noreferrer"
                       style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-                        padding: '12px',
+                        padding: '13px',
                         border: '1px solid rgba(37,211,102,0.3)',
                         borderRadius: '3px',
                         color: '#25d366',
                         fontFamily: "'Jost', sans-serif",
-                        fontSize: '0.72rem',
+                        fontSize: '0.78rem',
                         fontWeight: 600,
                         letterSpacing: '0.14em',
                         textTransform: 'uppercase',
@@ -471,7 +486,7 @@ export function Navbar() {
                         background: 'rgba(37,211,102,0.05)',
                       }}
                     >
-                      <MessageCircle size={15} />
+                      <MessageCircle size={16} />
                       WhatsApp Us
                     </a>
                   </div>
