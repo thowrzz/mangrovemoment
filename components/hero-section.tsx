@@ -128,7 +128,7 @@ export function HeroSection() {
           className="hero-video absolute inset-0 w-full h-full object-cover"
           poster="./poster.webp"
         >
-          <source src="./bg.mp4" type="video/mp4" />
+          <source src="./bg1.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/55" />
