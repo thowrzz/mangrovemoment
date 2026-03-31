@@ -229,7 +229,7 @@ export function HeroSection() {
               <rect x="9" y="11" width="14" height="10" rx="2"/>
               <circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
             </svg>
-            Pickup &amp; Drop Available from Varkala
+            Pickup &amp; Drop Available.
             {/* Chevron right */}
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6"/>
