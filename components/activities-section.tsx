@@ -76,6 +76,30 @@ const activities = [
     icon: '🚤',
     note: '1–5 persons per ride',
   },
+  {
+  id: 7,
+  name: 'Bumper Ride / Sofa Ride',
+  duration: '1 round',
+  price: '₹500',
+  tag: 'Thrilling',
+  tagColor: '#ff6b4c',
+  description: 'Hold tight and enjoy an exciting high-speed water bumper ride pulled by a boat. A fun and splash-filled experience perfect for thrill seekers and groups.',
+  image: './sofa.jpg',
+  icon: '🛟',
+  note: 'Per person · safety gear provided',
+},
+{
+  id: 8,
+  name: 'Banana Ride',
+  duration: '1 round',
+  price: '₹500',
+  tag: 'Group Fun',
+  tagColor: '#f4c542',
+  description: 'Jump on an inflatable banana boat and get ready for a fun-filled, bumpy ride across the water. Perfect for friends and groups looking for laughter and excitement.',
+  image: './banana.jpg',
+  icon: '🍌',
+  note: 'Per person · best for groups · safety gear provided',
+}
 ]
 
 export function ActivitiesSection() {
