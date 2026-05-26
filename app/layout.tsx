@@ -252,6 +252,11 @@ export const metadata: Metadata = {
     apple: './logo.png',
     shortcut: './logo.png',
   },
+  verification: {
+  google: 'OQ3uw_ciG0KHgD-9_mJXGQ9HTgl_a9nJ6pMrGxnzlSU',
+},
+
+
 
   robots: {
     index: true,
