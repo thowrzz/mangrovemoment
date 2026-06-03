@@ -16,7 +16,6 @@ export function FloatingButtons() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
 
         .fab-wrap {
           position: fixed;

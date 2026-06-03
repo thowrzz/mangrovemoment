@@ -51,8 +51,7 @@
 //   return (
 //     <>
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         .nav-root {
 //           font-family: 'Jost', sans-serif;
 //         }
@@ -280,7 +279,7 @@
 //                 transition: 'all 0.3s',
 //               }}>
 //                 <img
-//                   src="./logo.png"
+//                   src="/logo.png"
 //                   alt="Mangrove Moments Logo"
 //                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
 //                 />
@@ -564,7 +563,6 @@ export function Navbar() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
 
         .nav-root { font-family: 'Jost', sans-serif; }
 
@@ -764,7 +762,7 @@ export function Navbar() {
                 flexShrink: 0,
                 transition: 'all 0.3s',
               }}>
-                <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <div className="logo-text">Mangrove Moments</div>

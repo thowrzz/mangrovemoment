@@ -7,43 +7,49 @@ import { X, ZoomIn, Instagram, ArrowRight } from 'lucide-react'
 const galleryImages = [
   {
     id: 1,
-    src: './contry.jpg',
+    src: '/contry.jpg',
     title: 'Country Boating',
+    alt: 'Traditional country boat gliding through Paravur mangrove backwaters near Varkala, Kerala',
     tag: 'Backwaters',
     span: 'col-span-2 row-span-2', // large featured
   },
   {
     id: 2,
-    src: './kayaking1.png',
+    src: '/kayaking1.png',
     title: 'Kayaking Adventure',
+    alt: 'Guided kayaking through narrow mangrove tunnels at Paravur Backwaters, Kerala',
     tag: 'Kayaking',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 3,
-    src: './padil.jpg',
+    src: '/padil.jpg',
     title: 'Paddle Boarding',
+    alt: 'Stand up paddleboarding on the glassy waters of Paravur Lake near Varkala',
     tag: 'SUP',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 4,
-    src: './two.jpg',
+    src: '/two.jpg',
     title: 'Golden Sunset',
+    alt: 'Golden sunset over Paravur Lake backwaters with mangrove silhouettes, Kerala',
     tag: 'Nature',
     span: 'col-span-1 row-span-2',
   },
   {
     id: 5,
-    src: './group.png',
+    src: '/group.png',
     title: 'ATV Adventure',
+    alt: 'Group ATV quad bike ride on terrain beside Paravur Backwaters near Varkala',
     tag: 'Off-Road',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 6,
-    src: './speed.jpg',
+    src: '/speed.jpg',
     title: 'Speed Boat Ride',
+    alt: 'Speed boat tearing across Paravur Lake at full throttle near Varkala, Kerala',
     tag: 'Speed Boat',
     span: 'col-span-1 row-span-1',
   },
@@ -58,7 +64,6 @@ export function GallerySection() {
       style={{ background: '#fff', paddingTop: '96px', paddingBottom: '96px', fontFamily: "'Jost', sans-serif" }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .gal-grid {
           display: grid;
@@ -305,8 +310,12 @@ export function GallerySection() {
               >
                 <Image
                   src={img.src}
-                  alt={img.title}
+                  alt={img.alt || img.title}
                   fill
+                  sizes={i === 0
+                    ? '(max-width: 768px) 100vw, 50vw'
+                    : '(max-width: 768px) 50vw, 25vw'
+                  }
                   style={{ objectFit: 'cover' }}
                 />
 
@@ -333,7 +342,7 @@ export function GallerySection() {
             <ArrowRight size={14} />
           </button>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/varkala_mangrove_moments"
             target="_blank"
             rel="noopener noreferrer"
             className="insta-btn"

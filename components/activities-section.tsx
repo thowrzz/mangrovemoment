@@ -1,102 +1,119 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Clock, MessageCircle, Users, ArrowRight, Zap } from 'lucide-react'
 
 const activities = [
   {
     id: 1,
     name: 'Country Boating',
+    slug: 'country-boating',
     duration: '1 hr 15 min',
     price: '₹1,700',
     tag: 'Most Popular',
     tagColor: '#c9a84c',
     description: 'Glide through ancient mangrove channels on a traditional wooden country boat. The most immersive way to experience Paravur backwaters.',
-    image: './countryboating.png',
+    image: '/countryboating.png',
+    alt: 'Traditional country boat tour through Paravur mangrove backwaters near Varkala, Kerala',
     icon: '⛵',
     note: 'Pre-booking only · 1–2 persons · +₹250/extra pax',
   },
   {
     id: 2,
     name: 'Kayaking',
+    slug: 'kayaking',
     duration: '2 hrs',
     price: '₹700',
     tag: 'Best Value',
     tagColor: '#4caf82',
     description: 'Paddle silently through narrow mangrove tunnels with a local guide. Perfect for nature lovers and first-timers.',
-    image: './Kayaking.png',
+    image: '/Kayaking.png',
+    alt: 'Guided mangrove kayaking through narrow waterway channels at Paravur Backwaters near Varkala, Kerala',
     icon: '🛶',
     note: 'Per person · guided experience',
   },
   {
     id: 3,
     name: 'Stand Up Paddle',
+    slug: 'stand-up-paddle',
     duration: '2 hrs',
     price: '₹1,000',
     tag: 'Fun & Easy',
     tagColor: '#4c8ec9',
     description: 'Balance on the glassy backwaters and soak in stunning lake views. No experience needed — our guides ensure a great time.',
-    image: './standup.png',
+    image: '/standup.png',
+    alt: 'Stand up paddleboarding on calm glassy Paravur Lake near Varkala, Kerala backwaters',
     icon: '🏄',
     note: 'Per person',
   },
   {
     id: 4,
     name: 'Coracle Ride',
+    slug: 'coracle-ride',
     duration: '15 min',
     price: '₹300',
     tag: 'Unique to Kerala',
     tagColor: '#c97a4c',
     description: "Spin and drift in a traditional round basket boat — a centuries-old Kerala tradition that's pure joy for all ages.",
-    image: './coracleRide.jpg',
+    image: '/coracleRide.jpg',
+    alt: 'Traditional coracle round basket boat ride at Paravur Backwaters, a centuries-old Kerala tradition',
     icon: '🪵',
     note: 'Per person · min. 2 persons required',
   },
   {
     id: 5,
     name: 'ATV Ride',
+    slug: 'atv-ride',
     duration: '1 round',
     price: '₹300',
     tag: 'Adrenaline',
     tagColor: '#c94c4c',
     description: 'Rev up on rugged terrain beside the backwaters. A short but thrilling off-road adventure to get the heart pumping.',
-    image: './avtride.png',
+    image: '/avtride.png',
+    alt: 'ATV quad bike off-road ride on terrain beside Paravur Lake backwaters near Varkala, Kerala',
     icon: '🏍️',
     note: 'Per person',
   },
   {
     id: 6,
     name: 'Speed Boat',
+    slug: 'speed-boat',
     duration: '30 min',
     price: '₹3,500',
     tag: 'Premium',
     tagColor: '#8e4cc9',
     description: "Feel the rush as you tear across Paravur Lake at full speed. Perfect for groups who want the ultimate water thrill.",
-    image: './boat.png',
+    image: '/boat.png',
+    alt: 'Speed boat ride at full throttle across Paravur Lake near Varkala, Kerala backwaters',
     icon: '🚤',
     note: '1–5 persons per ride',
   },
   {
   id: 7,
   name: 'Bumper Ride / Sofa Ride',
+  slug: 'bumper-ride',
   duration: '1 round',
   price: '₹500',
   tag: 'Thrilling',
   tagColor: '#ff6b4c',
   description: 'Hold tight and enjoy an exciting high-speed water bumper ride pulled by a boat. A fun and splash-filled experience perfect for thrill seekers and groups.',
-  image: './sofa.jpg',
+  image: '/sofa.jpg',
+  alt: 'Bumper sofa ride inflatable tube pulled at high speed across Paravur Lake backwaters, Kerala',
   icon: '🛟',
   note: 'Per person · safety gear provided',
 },
 {
   id: 8,
   name: 'Banana Ride',
+  slug: 'banana-ride',
   duration: '1 round',
   price: '₹500',
   tag: 'Group Fun',
   tagColor: '#f4c542',
   description: 'Jump on an inflatable banana boat and get ready for a fun-filled, bumpy ride across the water. Perfect for friends and groups looking for laughter and excitement.',
-  image: './banana.jpg',
+  image: '/banana.jpg',
+  alt: 'Group banana boat ride inflatable water sports at Paravur Lake near Varkala, Kerala',
   icon: '🍌',
   note: 'Per person · best for groups · safety gear provided',
 }
@@ -124,7 +141,6 @@ export function ActivitiesSection() {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .act-card {
           background: #fff;
@@ -328,7 +344,7 @@ export function ActivitiesSection() {
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
           <p className="section-label" style={{ marginBottom: '14px' }}>What We Offer</p>
           <h2 className="section-title" style={{ marginBottom: '16px' }}>
-            Six Ways to
+            Eight Ways to
             <em style={{ fontStyle: 'italic', color: '#c9a84c' }}> Experience</em>
             <br />Paravur Backwaters
           </h2>
@@ -360,8 +376,9 @@ export function ActivitiesSection() {
               <div style={{ position: 'relative', height: '210px', overflow: 'hidden', background: '#e0ddd6' }}>
                 <Image
                   src={activity.image}
-                  alt={activity.name}
+                  alt={activity.alt || activity.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="act-img"
                   style={{ objectFit: 'cover' }}
                 />
@@ -397,7 +414,12 @@ export function ActivitiesSection() {
               {/* Card Body */}
               <div style={{ padding: '20px 20px 20px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
-                  <h3 className="act-name">{activity.name}</h3>
+                  <Link
+                    href={`/activities/${activity.slug}`}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <h3 className="act-name" style={{ transition: 'color 0.2s' }}>{activity.name}</h3>
+                  </Link>
                   <span className="act-duration">
                     <Clock size={11} />
                     {activity.duration}

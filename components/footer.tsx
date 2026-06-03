@@ -28,8 +28,7 @@
 //   return (
 //     <footer style={{ background: '#06160d', fontFamily: "'Jost', sans-serif" }}>
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         .ft-col-label {
 //           font-family: 'Jost', sans-serif;
 //           font-size: 0.6rem;
@@ -245,7 +244,7 @@
 //   border: '1px solid rgba(201,168,76,0.4)',
 //   flexShrink: 0,
 // }}>
-//   <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+//   <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 // </div>
 //               <div>
 //                 <div style={{
@@ -443,7 +442,6 @@ export function Footer() {
   return (
     <footer style={{ background: '#06160d', fontFamily: "'Jost', sans-serif" }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .ft-col-label {
           font-family: 'Jost', sans-serif;
@@ -660,7 +658,7 @@ export function Footer() {
                 border: '1px solid rgba(201,168,76,0.4)',
                 flexShrink: 0,
               }}>
-                <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <div style={{

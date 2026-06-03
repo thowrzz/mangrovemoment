@@ -54,8 +54,7 @@
 //       className="relative w-full h-screen flex items-center justify-center overflow-hidden"
 //     >
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         .hero-video { pointer-events: none; }
 //         .hero-video::-webkit-media-controls,
 //         .hero-video::-webkit-media-controls-enclosure,
@@ -339,7 +338,6 @@ export function HeroSection() {
       className="relative w-full h-screen flex items-center justify-center overflow-hidden"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .hero-video { pointer-events: none; }
         .hero-video::-webkit-media-controls,
@@ -483,7 +481,7 @@ export function HeroSection() {
         <div className="hero-sub flex items-center justify-center gap-4 mb-5">
           <div style={{ height:'1px', width:'40px', background:'rgba(201,168,76,.5)' }} />
           <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'1.05rem', fontWeight:400, color:'#ffffff', letterSpacing:'.06em', textShadow:'0 1px 12px rgba(0,0,0,.8)' }}>
-            Just 20 minutes from Varkala — 6 unique water experiences
+            Just 20 minutes from Varkala — 8 unique water experiences
           </p>
           <div style={{ height:'1px', width:'40px', background:'rgba(201,168,76,.5)' }} />
         </div>
