@@ -464,7 +464,7 @@ export function HeroSection() {
           <div className="location-badge">
             <MapPin size={11} color="#ffffff" />
             <span style={{ fontFamily:"'Jost',sans-serif", fontSize:'.7rem', fontWeight:500, letterSpacing:'.18em', textTransform:'uppercase', color:'#ffffff' }}>
-              Paravur Backwaters · Varkala · Kerala
+              Paravur Lake &amp; Backwaters · Varkala Water Sports
             </span>
           </div>
         </div>
@@ -481,7 +481,7 @@ export function HeroSection() {
         <div className="hero-sub flex items-center justify-center gap-4 mb-5">
           <div style={{ height:'1px', width:'40px', background:'rgba(201,168,76,.5)' }} />
           <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'1.05rem', fontWeight:400, color:'#ffffff', letterSpacing:'.06em', textShadow:'0 1px 12px rgba(0,0,0,.8)' }}>
-            Just 20 minutes from Varkala — 8 unique water experiences
+            Just 20 minutes from Varkala — 8 unique water sports &amp; kayaking experiences
           </p>
           <div style={{ height:'1px', width:'40px', background:'rgba(201,168,76,.5)' }} />
         </div>

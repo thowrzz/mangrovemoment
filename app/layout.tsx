@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: 'Mangrove Moments | Kayaking, Boating & Eco-Adventure at Paravur Backwaters, Kerala',
-    template: '%s | Mangrove Moments',
+    default: 'Mangrove Kayaking in Varkala | Paravur Backwaters Water Sports',
+    template: '%s | Mangrove Moments Varkala',
   },
   description:
-    'Explore Paravur Backwaters near Varkala with guided kayaking, country boating, coracle rides, ATV adventures & speed boat rides. Just 20 min from Varkala. Book via WhatsApp today.',
+    'Experience the best mangrove kayaking in Varkala. Explore Paravur Backwaters with guided sunset kayaking, stand up paddle boarding (SUP), and eco-friendly water sports just 20 mins from Varkala Cliff.',
 
   keywords: [
     'Paravur backwaters',
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: siteUrl,
     siteName: 'Mangrove Moments',
-    title: 'Mangrove Moments | Eco-Adventure at Paravur Backwaters, Kerala',
+    title: 'Mangrove Kayaking in Varkala | Paravur Backwaters Water Sports',
     description:
-      'Kayaking, country boating, coracle rides & ATV adventures at Paravur Backwaters — just 20 minutes from Varkala. Book on WhatsApp today.',
+      'Experience the best mangrove kayaking in Varkala. Explore Paravur Backwaters with guided sunset kayaking, stand up paddle boarding (SUP), and eco-friendly water sports just 20 mins from Varkala Cliff.',
     images: [
       {
         url: '/og-image.jpg',
