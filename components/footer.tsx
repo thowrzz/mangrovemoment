@@ -416,20 +416,20 @@ const PRIMARY_TEL  = '+91-9744201662'    // tel: link — primary
 const ALT_TEL      = '+91-9895023973'    // secondary / alternative
 
 const quickLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#activities', label: 'Activities' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/#activities', label: 'Activities' },
+  { href: '/#gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 const activityLinks = [
-  { href: '#activities', label: 'Country Boating', price: '₹1,700' },
-  { href: '#activities', label: 'Kayaking', price: '₹700' },
-  { href: '#activities', label: 'Stand Up Paddle', price: '₹1,000' },
-  { href: '#activities', label: 'Coracle Ride', price: '₹300' },
-  { href: '#activities', label: 'ATV Ride', price: '₹300' },
-  { href: '#activities', label: 'Speed Boat', price: '₹3,500' },
+  { href: '/activities/country-boating', label: 'Country Boating', price: '₹1,700' },
+  { href: '/activities/kayaking', label: 'Kayaking', price: '₹700' },
+  { href: '/activities/stand-up-paddle', label: 'Stand Up Paddle', price: '₹1,000' },
+  { href: '/activities/water-sports', label: 'Coracle Ride', price: '₹300' },
+  { href: '/activities/water-sports', label: 'ATV Ride', price: '₹300' },
+  { href: '/activities/water-sports', label: 'Speed Boat', price: '₹3,500' },
 ]
 
 const socials = [
@@ -608,10 +608,10 @@ export function Footer() {
           </div>
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <a href="#contact" className="book-now-btn">
+          <Link href="/contact" className="book-now-btn">
             Book Now
             <ArrowUpRight size={13} />
-          </a>
+          </Link>
           <a
             href={`https://wa.me/${PRIMARY_WA}`}
             target="_blank"
@@ -650,7 +650,7 @@ export function Footer() {
           className="ft-grid"
         >
           <div>
-            <Link href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', marginBottom: 20 }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', marginBottom: 20 }}>
               <div style={{
                 width: 44, height: 44,
                 borderRadius: '50%',
@@ -710,7 +710,7 @@ export function Footer() {
           <div>
             <span className="ft-col-label">Navigate</span>
             {quickLinks.map((l) => (
-              <a key={l.href} href={l.href} className="ft-link">{l.label}</a>
+              <Link key={l.href} href={l.href} className="ft-link">{l.label}</Link>
             ))}
           </div>
 
@@ -719,7 +719,7 @@ export function Footer() {
             <span className="ft-col-label">Experiences</span>
             {activityLinks.map((a) => (
               <div key={a.label} className="ft-activity-row">
-                <a href={a.href} className="ft-activity-name">{a.label}</a>
+                <Link href={a.href} className="ft-activity-name">{a.label}</Link>
                 <span className="ft-activity-price">{a.price}</span>
               </div>
             ))}

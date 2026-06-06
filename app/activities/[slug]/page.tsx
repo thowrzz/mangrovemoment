@@ -45,7 +45,7 @@ const activities = {
     tag: 'Most Popular',
     tagColor: '#c9a84c',
     icon: '⛵',
-    image: '/countryboating.png',
+    image: '/countryboating.webp',
     description: 'Step aboard a traditional Kerala wooden country boat and glide through the ancient channels of Paravur Backwaters. This is the most iconic and immersive experience we offer — a slow, beautiful journey through mangrove forests, across open lake stretches, with a knowledgeable guide sharing stories of the ecosystem and local culture.',
     highlights: [
       'Traditional hand-crafted wooden boat',
@@ -123,7 +123,7 @@ const activities = {
     tag: 'Adrenaline',
     tagColor: '#c94c4c',
     icon: '🏍️',
-    image: '/avtride.png',
+    image: '/avtride.webp',
     description: 'Get your blood pumping with a high-octane ATV quad bike ride on the rugged terrain beside Paravur Lake. Feel the roar of the engine as you tear across uneven ground, with stunning backwater views alongside you. A short but intensely satisfying off-road adventure — perfect as a complement to your water activities.',
     highlights: [
       'No driving experience required',

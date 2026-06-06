@@ -1,7 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { X } from 'lucide-react'
+import { X, MessageCircle, Phone, MapPin } from 'lucide-react'
+
+const PRIMARY_WA = '919744201662'
+const PRIMARY_TEL = '+91-9744201662'
 
 export function FloatingButtons() {
   const [visible, setVisible] = useState(false)
@@ -206,6 +209,64 @@ export function FloatingButtons() {
           .fab-wrap { bottom:20px; right:16px; gap:12px; }
           .fab-btn  { width:52px; height:52px; }
         }
+
+        .mobile-sticky-cta-bar {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60px;
+          background: rgba(13, 36, 21, 0.98);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-top: 1px solid rgba(201, 168, 76, 0.35);
+          z-index: 99999;
+          grid-template-columns: 35% 35% 30%;
+          align-items: center;
+        }
+
+        .mobile-cta-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          color: #fff;
+          font-family: 'Jost', sans-serif;
+          font-size: 0.72rem;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          text-decoration: none;
+          gap: 4px;
+          transition: background 0.2s;
+        }
+
+        .mobile-cta-item:active {
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .cta-whatsapp {
+          background: #25d366;
+          color: #fff;
+        }
+        .cta-whatsapp:active {
+          background: #1ebe5a;
+        }
+
+        .cta-call {
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+          .fab-wrap {
+            display: none !important;
+          }
+          .mobile-sticky-cta-bar {
+            display: grid;
+          }
+        }
       `}</style>
 
       {visible && (
@@ -240,7 +301,7 @@ export function FloatingButtons() {
               </div>
 
               <div className="wa-bubble-msg">
-                👋 Hi! Ready to explore Paravur backwaters? Chat for instant booking &amp; group quotes!
+                👋 Hi! Ready to explore Paravur backwaters? Chat for instant booking & group quotes!
               </div>
 
               <a
@@ -345,6 +406,33 @@ export function FloatingButtons() {
 
         </div>
       )}
+
+      {/* Mobile Sticky Bottom CTA Bar */}
+      <div className="mobile-sticky-cta-bar">
+        <a
+          href={`https://wa.me/${PRIMARY_WA}?text=Hi!%20I%20would%20like%20to%20book%20a%20slot%20for%20mangrove%20kayaking%20at%20Paravur%20Backwaters.`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-cta-item cta-whatsapp"
+        >
+          <MessageCircle size={18} />
+          <span>Book Now</span>
+        </a>
+        <a
+          href={`tel:${PRIMARY_TEL}`}
+          className="mobile-cta-item cta-call"
+        >
+          <Phone size={18} />
+          <span>Call Us</span>
+        </a>
+        <a
+          href="/location-paravur-backwaters"
+          className="mobile-cta-item cta-directions"
+        >
+          <MapPin size={18} />
+          <span>Directions</span>
+        </a>
+      </div>
     </>
   )
 }

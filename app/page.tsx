@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/navbar'
 import { HeroSection } from '@/components/hero-section'
 import { ActivitiesSection } from '@/components/activities-section'
+import { SlotPromotionSection } from '@/components/slot-promotion-section'
 import { WhyChooseUsSection } from '@/components/why-choose-us-section'
 import { GallerySection } from '@/components/gallery-section'
 import { TestimonialsSection } from '@/components/testimonials-section'
@@ -15,7 +16,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ActivitiesSection />
-      <PickupDropSection />   {/* ← add here */}
+      <SlotPromotionSection />
+      <PickupDropSection />
 
       <WhyChooseUsSection />
       <GallerySection />

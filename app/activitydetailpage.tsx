@@ -14,7 +14,7 @@ const activities = [
     tag: 'Most Popular',
     tagColor: '#c9a84c',
     description: 'Glide through ancient mangrove channels on a traditional wooden country boat. The most immersive way to experience Paravur backwaters.',
-    image: './countryboating.png',
+    image: './countryboating.webp',
     icon: '⛵',
     details: {
       fullDescription: `Step aboard a hand-crafted traditional Kerala country boat and drift through the timeless labyrinth of Paravur's mangrove waterways. This is not merely a boat ride — it is an unhurried communion with one of Kerala's most pristine backwater ecosystems. Your experienced local guide will navigate narrow channels where kingfishers dart overhead and the air carries the gentle fragrance of water hyacinth.
@@ -206,7 +206,7 @@ Operated by a skilled local coracle-man using a single paddle with expert rotati
     tag: 'Adrenaline',
     tagColor: '#c94c4c',
     description: 'Rev up on rugged terrain beside the backwaters. A short but thrilling off-road adventure to get the heart pumping.',
-    image: './avtride.png',
+    image: './avtride.webp',
     icon: '🏍️',
     details: {
       fullDescription: `Our ATV track runs along the backwater shoreline through a rugged mix of mud, gravel, and grass terrain — purpose-built for maximum thrill with controlled safety. Ride powerful all-terrain quad bikes along a scenic route where the backwaters shimmer just metres away.

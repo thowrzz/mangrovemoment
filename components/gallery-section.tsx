@@ -15,7 +15,7 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: '/kayaking1.png',
+    src: '/kayaking1.webp',
     title: 'Kayaking Adventure',
     alt: 'Guided kayaking through narrow mangrove tunnels at Paravur Backwaters, Kerala',
     tag: 'Kayaking',
@@ -39,7 +39,7 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: '/group.png',
+    src: '/group.webp',
     title: 'ATV Adventure',
     alt: 'Group ATV quad bike ride on terrain beside Paravur Backwaters near Varkala',
     tag: 'Off-Road',
@@ -61,7 +61,7 @@ export function GallerySection() {
   return (
     <section
       id="gallery"
-      style={{ background: '#fff', paddingTop: '96px', paddingBottom: '96px', fontFamily: "'Jost', sans-serif" }}
+      style={{ background: '#fff', paddingTop: '96px', paddingBottom: '96px', fontFamily: "'Jost', sans-serif", scrollMarginTop: '72px' }}
     >
       <style>{`
 

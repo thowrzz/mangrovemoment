@@ -14,7 +14,7 @@ const activities = [
     tag: 'Most Popular',
     tagColor: '#c9a84c',
     description: 'Glide through ancient mangrove channels on a traditional wooden country boat. The most immersive way to experience Paravur backwaters.',
-    image: '/countryboating.png',
+    image: '/countryboating.webp',
     alt: 'Traditional country boat tour through Paravur mangrove backwaters near Varkala, Kerala',
     icon: '⛵',
     note: 'Pre-booking only · 1–2 persons · +₹250/extra pax',
@@ -70,7 +70,7 @@ const activities = [
     tag: 'Adrenaline',
     tagColor: '#c94c4c',
     description: 'Rev up on rugged terrain beside the backwaters. A short but thrilling off-road adventure to get the heart pumping.',
-    image: '/avtride.png',
+    image: '/avtride.webp',
     alt: 'ATV quad bike off-road ride on terrain beside Paravur Lake backwaters near Varkala, Kerala',
     icon: '🏍️',
     note: 'Per person',
@@ -138,6 +138,7 @@ export function ActivitiesSection() {
         fontFamily: "'Jost', sans-serif",
         paddingTop: '96px',
         paddingBottom: '96px',
+        scrollMarginTop: '72px',
       }}
     >
       <style>{`
@@ -359,7 +360,7 @@ export function ActivitiesSection() {
             lineHeight: 1.7,
           }}>
             Premium eco-experiences on Paravur Lake —<br />
-            group discounts &amp; homestay packages available
+            group discounts & homestay packages available
           </p>
         </div>
 
@@ -415,7 +416,14 @@ export function ActivitiesSection() {
               <div style={{ padding: '20px 20px 20px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                   <Link
-                    href={`/activities/${activity.slug}`}
+                    href={
+                      activity.slug === 'atv-ride' ||
+                      activity.slug === 'speed-boat' ||
+                      activity.slug === 'bumper-ride' ||
+                      activity.slug === 'banana-ride'
+                        ? '/activities/water-sports'
+                        : `/activities/${activity.slug}`
+                    }
                     style={{ textDecoration: 'none' }}
                   >
                     <h3 className="act-name" style={{ transition: 'color 0.2s' }}>{activity.name}</h3>
@@ -492,7 +500,7 @@ export function ActivitiesSection() {
               textTransform: 'uppercase',
               color: '#e8d49a',
             }}>
-              Groups &amp; Bulk Bookings
+              Groups & Bulk Bookings
             </span>
           </div>
 
@@ -507,7 +515,7 @@ export function ActivitiesSection() {
             position: 'relative',
             zIndex: 2,
           }}>
-            School Trips, Family Groups &amp;{' '}
+            School Trips, Family Groups &{' '}
             <em style={{ fontStyle: 'italic', color: '#f4e5a8', fontWeight: 300 }}>Corporate Outings</em>
           </h3>
 

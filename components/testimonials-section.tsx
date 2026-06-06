@@ -48,6 +48,7 @@ export function TestimonialsSection() {
         fontFamily: "'Jost', sans-serif",
         position: 'relative',
         overflow: 'hidden',
+        scrollMarginTop: '72px',
       }}
     >
       <style>{`
