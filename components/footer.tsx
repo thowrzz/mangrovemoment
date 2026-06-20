@@ -793,9 +793,14 @@ export function Footer() {
 
       {/* ── Copyright bar ── */}
       <div className="copyright-bar">
-        <span className="copyright-text">
-          © {new Date().getFullYear()} Mangrove Moments · All rights reserved
-        </span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', textAlign: 'left' }}>
+          <span className="copyright-text">
+            © {new Date().getFullYear()} Mangrove Moments · All rights reserved
+          </span>
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.62rem', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.2)' }}>
+            Developed by <a href="https://www.digitalproductsolutions.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#c9a84c', textDecoration: 'none' }}>Digital Product Solutions</a>
+          </span>
+        </div>
         <span className="eco-badge">
           <Leaf size={10} />
           Eco-responsible tourism · Paravur, Varkala, Kerala
