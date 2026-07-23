@@ -1,6 +1,8 @@
 // import Link from 'next/link'
 // import { Instagram, Youtube, MessageCircle, MapPin, Phone, ArrowUpRight, Leaf } from 'lucide-react'
 
+
+
 // const quickLinks = [
 //   { href: '#home', label: 'Home' },
 //   { href: '#activities', label: 'Activities' },
@@ -8,6 +10,9 @@
 //   { href: '#about', label: 'About' },
 //   { href: '#contact', label: 'Contact' },
 // ]
+
+
+
 
 // const activityLinks = [
 //   { href: '#activities', label: 'Country Boating', price: '₹1,800' },

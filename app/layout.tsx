@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { OfferPopupModal } from '@/components/offer-popup-modal'
 import './globals.css'
 
 const _geist = Geist({ subsets: ['latin'], variable: '--font-sans' })
@@ -314,6 +315,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         {children}
+        <OfferPopupModal />
         <Analytics />
       </body>
     </html>
