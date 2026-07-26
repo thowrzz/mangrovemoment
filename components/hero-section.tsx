@@ -444,7 +444,7 @@ export function HeroSection() {
           webkit-playsinline="true"
           preload="auto"
           className="hero-video absolute inset-0 w-full h-full object-cover"
-          poster="./poster.webp"
+          poster="./Kayaking.png"
         >
           <source src="./bg1.mp4" type="video/mp4" />
         </video>
