@@ -59,8 +59,7 @@
 //       }}
 //     >
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         /* ── Route line animation ── */
 //         @keyframes dash {
 //           to { stroke-dashoffset: 0; }
@@ -501,30 +500,30 @@ const pickupLocations = [
   {
     id: 1,
     place: 'Varkala Cliff',
-    distance: '20 min',
+    distance: '20 min (9.2 km)',
     icon: '🏖️',
-    note: 'North Cliff & South Cliff hotels',
+    note: 'North & South Cliff hotels',
   },
   {
     id: 2,
     place: 'Varkala Beach',
-    distance: '22 min',
+    distance: '18 min (8.5 km)',
     icon: '🌊',
     note: 'Papanasam Beach area',
   },
   {
     id: 3,
     place: 'Kollam Town',
-    distance: '35 min',
+    distance: '30 min (18 km)',
     icon: '🏙️',
-    note: 'KSRTC Bus Stand & surroundings',
+    note: 'KSRTC Bus Stand & town',
   },
   {
     id: 4,
-    place: 'Kottiyam / Karunagappally',
-    distance: '30 min',
-    icon: '🛣️',
-    note: 'On request',
+    place: 'Trivandrum Airport',
+    distance: '60 min (50 km)',
+    icon: '✈️',
+    note: 'International Airport (TRV)',
   },
 ]
 
@@ -551,10 +550,10 @@ export function PickupDropSection() {
         paddingBottom: '96px',
         position: 'relative',
         overflow: 'hidden',
+        scrollMarginTop: '72px',
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         @keyframes dash {
           to { stroke-dashoffset: 0; }
@@ -700,7 +699,7 @@ export function PickupDropSection() {
             fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
             fontWeight: 300, color: '#0d2415', lineHeight: 1.12, marginBottom: '16px',
           }}>
-            Pickup &amp; Drop
+            Pickup & Drop
             <br />
             <em style={{ fontStyle: 'italic', color: '#c9a84c', fontWeight: 400 }}>Available from Varkala</em>
           </h2>
@@ -940,7 +939,7 @@ export function PickupDropSection() {
               fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
               fontWeight: 300, color: '#fff', lineHeight: 1.25,
             }}>
-              We come to you — just share your hotel &amp;{' '}
+              We come to you — just share your hotel &{' '}
               <em style={{ fontStyle: 'italic', color: '#f4e5a8' }}>we handle the rest</em>
             </div>
           </div>

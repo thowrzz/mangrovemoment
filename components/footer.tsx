@@ -1,6 +1,8 @@
 // import Link from 'next/link'
 // import { Instagram, Youtube, MessageCircle, MapPin, Phone, ArrowUpRight, Leaf } from 'lucide-react'
 
+
+
 // const quickLinks = [
 //   { href: '#home', label: 'Home' },
 //   { href: '#activities', label: 'Activities' },
@@ -8,6 +10,9 @@
 //   { href: '#about', label: 'About' },
 //   { href: '#contact', label: 'Contact' },
 // ]
+
+
+
 
 // const activityLinks = [
 //   { href: '#activities', label: 'Country Boating', price: '₹1,800' },
@@ -28,8 +33,7 @@
 //   return (
 //     <footer style={{ background: '#06160d', fontFamily: "'Jost', sans-serif" }}>
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         .ft-col-label {
 //           font-family: 'Jost', sans-serif;
 //           font-size: 0.6rem;
@@ -245,7 +249,7 @@
 //   border: '1px solid rgba(201,168,76,0.4)',
 //   flexShrink: 0,
 // }}>
-//   <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+//   <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 // </div>
 //               <div>
 //                 <div style={{
@@ -417,20 +421,20 @@ const PRIMARY_TEL  = '+91-9744201662'    // tel: link — primary
 const ALT_TEL      = '+91-9895023973'    // secondary / alternative
 
 const quickLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#activities', label: 'Activities' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/#activities', label: 'Activities' },
+  { href: '/#gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 const activityLinks = [
-  { href: '#activities', label: 'Country Boating', price: '₹1,700' },
-  { href: '#activities', label: 'Kayaking', price: '₹700' },
-  { href: '#activities', label: 'Stand Up Paddle', price: '₹1,000' },
-  { href: '#activities', label: 'Coracle Ride', price: '₹300' },
-  { href: '#activities', label: 'ATV Ride', price: '₹300' },
-  { href: '#activities', label: 'Speed Boat', price: '₹3,500' },
+  { href: '/activities/country-boating', label: 'Country Boating', price: '₹1,700' },
+  { href: '/activities/kayaking', label: 'Kayaking', price: '₹700' },
+  { href: '/activities/stand-up-paddle', label: 'Stand Up Paddle', price: '₹1,000' },
+  { href: '/activities/water-sports', label: 'Coracle Ride', price: '₹300' },
+  { href: '/activities/water-sports', label: 'ATV Ride', price: '₹300' },
+  { href: '/activities/water-sports', label: 'Speed Boat', price: '₹3,500' },
 ]
 
 const socials = [
@@ -443,7 +447,6 @@ export function Footer() {
   return (
     <footer style={{ background: '#06160d', fontFamily: "'Jost', sans-serif" }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .ft-col-label {
           font-family: 'Jost', sans-serif;
@@ -610,10 +613,10 @@ export function Footer() {
           </div>
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <a href="#contact" className="book-now-btn">
+          <Link href="/contact" className="book-now-btn">
             Book Now
             <ArrowUpRight size={13} />
-          </a>
+          </Link>
           <a
             href={`https://wa.me/${PRIMARY_WA}`}
             target="_blank"
@@ -652,7 +655,7 @@ export function Footer() {
           className="ft-grid"
         >
           <div>
-            <Link href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', marginBottom: 20 }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', marginBottom: 20 }}>
               <div style={{
                 width: 44, height: 44,
                 borderRadius: '50%',
@@ -660,7 +663,7 @@ export function Footer() {
                 border: '1px solid rgba(201,168,76,0.4)',
                 flexShrink: 0,
               }}>
-                <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <div style={{
@@ -712,7 +715,7 @@ export function Footer() {
           <div>
             <span className="ft-col-label">Navigate</span>
             {quickLinks.map((l) => (
-              <a key={l.href} href={l.href} className="ft-link">{l.label}</a>
+              <Link key={l.href} href={l.href} className="ft-link">{l.label}</Link>
             ))}
           </div>
 
@@ -721,7 +724,7 @@ export function Footer() {
             <span className="ft-col-label">Experiences</span>
             {activityLinks.map((a) => (
               <div key={a.label} className="ft-activity-row">
-                <a href={a.href} className="ft-activity-name">{a.label}</a>
+                <Link href={a.href} className="ft-activity-name">{a.label}</Link>
                 <span className="ft-activity-price">{a.price}</span>
               </div>
             ))}
@@ -795,9 +798,14 @@ export function Footer() {
 
       {/* ── Copyright bar ── */}
       <div className="copyright-bar">
-        <span className="copyright-text">
-          © {new Date().getFullYear()} Mangrove Moments · All rights reserved
-        </span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', textAlign: 'left' }}>
+          <span className="copyright-text">
+            © {new Date().getFullYear()} Mangrove Moments · All rights reserved
+          </span>
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.62rem', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.2)' }}>
+            Developed by <a href="https://www.digitalproductsolutions.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#c9a84c', textDecoration: 'none' }}>Digital Product Solutions</a>
+          </span>
+        </div>
         <span className="eco-badge">
           <Leaf size={10} />
           Eco-responsible tourism · Paravur, Varkala, Kerala

@@ -82,8 +82,7 @@
 //       }}
 //     >
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         .contact-label {
 //           font-family: 'Jost', sans-serif;
 //           font-size: 0.68rem;
@@ -683,10 +682,10 @@ export function ContactSection() {
         fontFamily: "'Jost', sans-serif",
         position: 'relative',
         overflow: 'hidden',
+        scrollMarginTop: '72px',
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .contact-label {
           font-family: 'Jost', sans-serif;
@@ -951,7 +950,7 @@ export function ContactSection() {
               <div className="info-title" style={{ marginBottom: '10px' }}>Find Us</div>
               <div className="map-embed">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.123456789!2d76.6200!3d9.0200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fa0e1b3e1b2b%3A0x1234567890abcdef!2sParavur+Lake%2C+Kollam%2C+Kerala!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.3683973963884!2d76.68554047477834!3d8.845251391208922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e5000fd6b065%3A0x84b42186dc6f8f27!2sMangrove%20Moments%20Boatclub%20%E2%80%93%20Varkala%20Mangrove%20Kayaking!5e0!3m2!1sen!2sin!4v1780774002099!5m2!1sen!2sin"
                   width="100%"
                   height="220"
                   style={{ border: 0, filter: 'saturate(0.7) contrast(1.05)' }}

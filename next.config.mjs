@@ -3,9 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
+  // Image optimization enabled — Next.js will auto-compress & serve WebP
 }
 
 export default nextConfig

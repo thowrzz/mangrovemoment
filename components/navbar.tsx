@@ -51,8 +51,7 @@
 //   return (
 //     <>
 //       <style>{`
-//         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
-
+//
 //         .nav-root {
 //           font-family: 'Jost', sans-serif;
 //         }
@@ -280,7 +279,7 @@
 //                 transition: 'all 0.3s',
 //               }}>
 //                 <img
-//                   src="./logo.png"
+//                   src="/logo.png"
 //                   alt="Mangrove Moments Logo"
 //                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
 //                 />
@@ -529,20 +528,21 @@ const PRIMARY_WA   = '919744201662'      // WhatsApp + primary bookings
 const PRIMARY_TEL  = '+91-9744201662'    // tel: link — primary
 
 const activities = [
-  { label: 'Country Boating', icon: Sailboat },
-  { label: 'Kayaking', icon: MdRowing },
-  { label: 'Stand Up Paddle', icon: TbStretching },
-  { label: 'Coracle Ride', icon: GiWaterSplash },
-  { label: 'ATV Ride', icon: TbMotorbike },
-  { label: 'Speed Boat', icon: MdSpeed },
+  { label: 'Country Boating', icon: Sailboat, href: '/activities/country-boating' },
+  { label: 'Kayaking', icon: MdRowing, href: '/activities/kayaking' },
+  { label: 'Stand Up Paddle', icon: TbStretching, href: '/activities/stand-up-paddle' },
+  { label: 'Water Sports', icon: MdSpeed, href: '/activities/water-sports' },
 ]
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#activities', label: 'Activities' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/#activities', label: 'Activities' },
+  { href: '/location-paravur-backwaters', label: 'Location' },
+  { href: '/about', label: 'About' },
+  { href: '/reviews', label: 'Reviews' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {
@@ -564,7 +564,6 @@ export function Navbar() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
 
         .nav-root { font-family: 'Jost', sans-serif; }
 
@@ -755,7 +754,7 @@ export function Navbar() {
           <div className="flex justify-between items-center h-[72px]">
 
             {/* ── Logo ── */}
-            <Link href="#home" className="flex items-center gap-3 group" style={{ textDecoration: 'none' }}>
+            <Link href="/" className="flex items-center gap-3 group" style={{ textDecoration: 'none' }}>
               <div style={{
                 width: 44, height: 44,
                 borderRadius: '50%',
@@ -764,7 +763,7 @@ export function Navbar() {
                 flexShrink: 0,
                 transition: 'all 0.3s',
               }}>
-                <img src="./logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/logo.png" alt="Mangrove Moments Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <div className="logo-text">Mangrove Moments</div>
@@ -789,7 +788,7 @@ export function Navbar() {
                           const IconComponent = a.icon
                           return (
                             <DropdownMenuItem key={a.label} className="activity-item" asChild>
-                              <Link href="#activities" style={{ textDecoration: 'none' }}>
+                              <Link href={a.href} style={{ textDecoration: 'none' }}>
                                 <IconComponent size={18} className="activity-icon" />
                                 <span>{a.label}</span>
                               </Link>
@@ -906,7 +905,7 @@ export function Navbar() {
                                 return (
                                   <Link
                                     key={a.label}
-                                    href="#activities"
+                                    href={a.href}
                                     onClick={() => setMobileOpen(false)}
                                     className="mobile-activity-link"
                                   >
