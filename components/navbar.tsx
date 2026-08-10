@@ -599,19 +599,20 @@ export function Navbar() {
 
         .nav-link {
           position: relative;
-          font-size: 0.85rem;
+          font-size: 0.78rem;
           font-weight: 500;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
           color: rgba(255,255,255,0.95);
           transition: color 0.25s;
-          padding-bottom: 4px;
+          padding-bottom: 2px;
           cursor: pointer;
           background: none;
           border: none;
           display: inline-flex;
           align-items: center;
-          gap: 5px;
+          gap: 4px;
+          white-space: nowrap;
         }
         .nav-link::after {
           content: '';
@@ -751,7 +752,7 @@ export function Navbar() {
       `}</style>
 
       <nav className={`nav-root fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'nav-scrolled' : 'nav-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-[72px]">
 
             {/* ── Logo ── */}
@@ -773,7 +774,7 @@ export function Navbar() {
             </Link>
 
             {/* ── Desktop Nav ── */}
-            <div className="hidden lg:flex items-center gap-7">
+            <div className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6">
               {navLinks.map((link) => {
                 if (link.label === 'Activities') {
                   return (
