@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: 'Mangrove Kayaking in Varkala | Paravur Backwaters Water Sports',
+    default: 'Mangrove Kayaking near Varkala Cliff | Paravur Lake Eco Tours — Mangrove Moments',
     template: '%s | Mangrove Moments Varkala',
   },
   description:
-    'Experience the best mangrove kayaking in Varkala. Explore Paravur Backwaters with guided sunset kayaking, stand up paddle boarding (SUP), and eco-friendly water sports just 20 mins from Varkala Cliff.',
+    'Guided mangrove kayaking, country boat rides, SUP & water sports at Paravur Lake — 20 min from Varkala Cliff. 580+ 5-star reviews. Sunrise & sunset slots. Book on WhatsApp.',
 
   keywords: [
     'Paravur backwaters',
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: siteUrl,
     siteName: 'Mangrove Moments',
-    title: 'Mangrove Kayaking in Varkala | Paravur Backwaters Water Sports',
+    title: 'Mangrove Kayaking near Varkala Cliff | Paravur Lake Eco Tours — Mangrove Moments',
     description:
-      'Experience the best mangrove kayaking in Varkala. Explore Paravur Backwaters with guided sunset kayaking, stand up paddle boarding (SUP), and eco-friendly water sports just 20 mins from Varkala Cliff.',
+      'Guided mangrove kayaking, country boat rides, SUP & water sports at Paravur Lake — 20 min from Varkala Cliff. 580+ 5-star reviews. Sunrise & sunset slots. Book on WhatsApp.',
     images: [
       {
         url: '/og-image.jpg',
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Mangrove Moments | Eco-Adventure at Paravur Backwaters',
+    title: 'Mangrove Kayaking near Varkala Cliff | Paravur Lake Eco Tours — Mangrove Moments',
     description:
-      'Kayaking, country boating, coracle rides & ATV at Paravur Backwaters near Varkala, Kerala.',
+      'Guided mangrove kayaking, country boat rides, SUP & water sports at Paravur Lake — 20 min from Varkala Cliff.',
     images: ['/og-image.jpg'],
   },
 
@@ -101,9 +101,9 @@ export const metadata: Metadata = {
 const touristAttractionLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: 'Mangrove Moments',
+  name: 'Mangrove Moments - Paravur Lake Eco Adventures',
   description:
-    'Eco-adventure destination at Paravur Backwaters offering kayaking, country boating, coracle rides, ATV rides, stand-up paddleboarding, speed boat rides, bumper rides and banana boat rides. Just 20 minutes from Varkala, Kerala.',
+    'Guided mangrove kayaking, country boat rides, SUP, coracle rides and water sports at Paravur Lake, 20 minutes from Varkala Cliff.',
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   image: `${siteUrl}/og-image.jpg`,
@@ -111,7 +111,7 @@ const touristAttractionLd = {
   alternateName: 'Mangrove Moments Paravur',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Paravur Lake',
+    streetAddress: 'Nedungolam, Paravur Lake',
     addressLocality: 'Paravur',
     addressRegion: 'Kerala',
     postalCode: '691334',
@@ -119,8 +119,8 @@ const touristAttractionLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '9.0200',
-    longitude: '76.6200',
+    latitude: '8.8147',
+    longitude: '76.6994',
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
@@ -131,7 +131,14 @@ const touristAttractionLd = {
     opens: '05:30',
     closes: '18:00',
   },
-  priceRange: '₹300 – ₹3500',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '580',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  priceRange: '₹₹',
   currenciesAccepted: 'INR',
   paymentAccepted: 'Cash, UPI',
   touristType: ['Nature lovers', 'Adventure seekers', 'Families', 'Students', 'Corporate groups'],
@@ -156,7 +163,7 @@ const localBusinessLd = {
   priceRange: '₹₹',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Paravur Lake',
+    streetAddress: 'Nedungolam, Paravur Lake',
     addressLocality: 'Paravur',
     addressRegion: 'Kerala',
     postalCode: '691334',
@@ -164,8 +171,8 @@ const localBusinessLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '9.0200',
-    longitude: '76.6200',
+    latitude: '8.8147',
+    longitude: '76.6994',
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
@@ -179,7 +186,7 @@ const localBusinessLd = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
-    reviewCount: '500',
+    reviewCount: '580',
     bestRating: '5',
     worstRating: '1',
   },
@@ -306,8 +313,8 @@ export default function RootLayout({
         {/* Geographic meta tags — Paravur Lake */}
         <meta name="geo.region" content="IN-KL" />
         <meta name="geo.placename" content="Paravur, Varkala, Kerala" />
-        <meta name="geo.position" content="9.0200;76.6200" />
-        <meta name="ICBM" content="9.0200, 76.6200" />
+        <meta name="geo.position" content="8.8147;76.6994" />
+        <meta name="ICBM" content="8.8147, 76.6994" />
 
         {/* Language & locale */}
         <meta httpEquiv="content-language" content="en-IN" />

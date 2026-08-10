@@ -7,8 +7,8 @@ import { Star, MessageCircle, Heart, Shield, Users, ArrowUpRight } from 'lucide-
 const siteUrl = 'https://www.mangrovemoments.com'
 
 export const metadata: Metadata = {
-  title: 'Guest Reviews & Testimonials | Mangrove Moments Varkala',
-  description: 'Read authentic guest reviews for Mangrove Moments Boatclub. See why we are rated 5★ on Google Business Profile for Varkala mangrove kayaking.',
+  title: 'Guest Reviews | Mangrove Moments Varkala Kayaking',
+  description: 'Read 580+ verified guest reviews for Mangrove Moments. 5.0★ rating for mangrove kayaking, boat rides & water sports at Paravur Lake near Varkala. Book your adventure.',
   keywords: ['Varkala mangrove kayaking reviews', 'mangrove moments testimonials', 'Paravur lake boating rating', 'things to do near Varkala reviews'],
   alternates: {
     canonical: '/reviews',
@@ -105,19 +105,18 @@ export default function ReviewsPage() {
                 marginBottom: '16px',
               }}
             >
-              Guest Experiences
+              Guest Testimonials
             </p>
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
+                fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)',
                 fontWeight: 300,
                 lineHeight: 1.15,
                 marginBottom: '20px',
               }}
             >
-              Stories from Our <br />
-              <span style={{ fontStyle: 'italic', color: '#e8d49a' }}>Adventurers</span>
+              Guest Reviews for Mangrove Moments — Varkala Backwater Adventures
             </h1>
             <p
               style={{

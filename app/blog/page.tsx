@@ -9,8 +9,8 @@ import { Clock, BookOpen, ArrowRight } from 'lucide-react'
 const siteUrl = 'https://www.mangrovemoments.com'
 
 export const metadata: Metadata = {
-  title: 'Varkala Backwaters Blog & Kayaking Guides | Mangrove Moments',
-  description: 'Read local travel guides, tips, and itineraries for mangrove kayaking, country boat rides, and things to do near Varkala, Kerala.',
+  title: 'Varkala Travel Blog | Kayaking Guides & Backwater Tips',
+  description: 'Local guides share insider tips on kayaking, backwater tours, and things to do near Varkala. Paravur Lake travel guides, safety tips & booking advice.',
   keywords: ['things to do near Varkala', 'Varkala travel guides', 'Paravur lake blog', 'mangrove forest tour tips'],
   alternates: {
     canonical: '/blog',
@@ -93,14 +93,13 @@ export default function BlogIndexPage() {
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
+                fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)',
                 fontWeight: 300,
                 lineHeight: 1.15,
                 marginBottom: '20px',
               }}
             >
-              Varkala Backwaters <br />
-              <span style={{ fontStyle: 'italic', color: '#e8d49a' }}>Travel Blog</span>
+              Varkala Travel Blog — Kayaking Guides & Backwater Tips
             </h1>
             <p
               style={{

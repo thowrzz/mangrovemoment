@@ -422,19 +422,20 @@ const ALT_TEL      = '+91-9895023973'    // secondary / alternative
 
 const quickLinks = [
   { href: '/', label: 'Home' },
+  { href: '/things-to-do-in-varkala', label: 'Things to Do in Varkala' },
   { href: '/#activities', label: 'Activities' },
-  { href: '/#gallery', label: 'Gallery' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/location-paravur-backwaters', label: 'Location & Map' },
+  { href: '/about', label: 'About Us' },
+  { href: '/contact', label: 'Contact & Directions' },
 ]
 
 const activityLinks = [
+  { href: '/activities/kayaking', label: 'Mangrove Kayaking', price: '₹700' },
   { href: '/activities/country-boating', label: 'Country Boating', price: '₹1,700' },
-  { href: '/activities/kayaking', label: 'Kayaking', price: '₹700' },
   { href: '/activities/stand-up-paddle', label: 'Stand Up Paddle', price: '₹1,000' },
-  { href: '/activities/water-sports', label: 'Coracle Ride', price: '₹300' },
-  { href: '/activities/water-sports', label: 'ATV Ride', price: '₹300' },
-  { href: '/activities/water-sports', label: 'Speed Boat', price: '₹3,500' },
+  { href: '/activities/coracle-ride', label: 'Coracle Ride', price: '₹300' },
+  { href: '/activities/atv-ride', label: 'ATV Quad Ride', price: '₹300' },
+  { href: '/activities/speed-boat', label: 'Speed Boat', price: '₹3,500' },
 ]
 
 const socials = [

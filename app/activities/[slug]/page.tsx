@@ -28,9 +28,9 @@ const activities = {
       'Best at sunrise for bird-watching',
       'Small group sizes for a personal experience',
     ],
-    metaTitle: 'Kayaking at Paravur Backwaters, Kerala | Mangrove Moments',
-    metaDesc: 'Guided kayaking through mangrove tunnels at Paravur Backwaters near Varkala, Kerala. ₹700/person, 2 hours, no experience needed. Book on WhatsApp today.',
-    keywords: ['kayaking Paravur', 'mangrove kayaking Kerala', 'kayaking near Varkala', 'guided kayaking Kerala backwaters', 'Paravur backwater kayaking'],
+    metaTitle: 'Mangrove Forest Kayaking Varkala | Paravur Lake Guided Tours — Mangrove Moments',
+    metaDesc: 'Paddle through mangrove tunnels at Paravur Lake. Guided sunrise & sunset kayaking 20 min from Varkala Cliff. Safe for beginners. Life jackets & local guides included. From ₹700. Book now.',
+    keywords: ['Varkala mangrove kayaking', 'Paravur lake kayaking', 'mangrove forest kayaking Varkala', 'guided kayaking Kerala backwaters', 'Paravur backwater kayaking'],
     schemaPrice: '700',
     schemaCurrency: 'INR',
   },
@@ -54,8 +54,8 @@ const activities = {
       'Pre-booking strongly recommended',
       'Available from 5:30 AM — perfect for golden hour',
     ],
-    metaTitle: 'Country Boating at Paravur Backwaters, Kerala | Mangrove Moments',
-    metaDesc: 'Traditional country boat tour through Paravur Backwaters near Varkala. ₹1,700 for 1–2 persons. Kerala\'s most scenic backwater experience. Book on WhatsApp.',
+    metaTitle: 'Country Boat Ride Paravur Backwaters | Traditional Varkala Backwater Tour',
+    metaDesc: 'Experience a peaceful country boat ride through Paravur backwaters near Varkala. Traditional boat, local guide, bird watching. 20 min from Varkala Cliff. Daily departures. Book on WhatsApp.',
     keywords: ['country boating Kerala', 'Paravur country boat', 'traditional boat Kerala backwaters', 'country boat tour Varkala', 'wooden boat Paravur'],
     schemaPrice: '1700',
     schemaCurrency: 'INR',
@@ -80,8 +80,8 @@ const activities = {
       'Perfect for solo travellers & groups',
       'Life jackets provided',
     ],
-    metaTitle: 'Stand Up Paddleboarding at Paravur Backwaters, Kerala | Mangrove Moments',
-    metaDesc: 'Stand up paddleboarding on Paravur Lake near Varkala, Kerala. ₹1,000/person. No experience needed. Calm backwater SUP experience with guides. Book now.',
+    metaTitle: 'Stand Up Paddleboarding Varkala | SUP Paravur Lake near Cliff',
+    metaDesc: 'Try stand-up paddleboarding on calm Paravur Lake waters. Great for beginners. Sunset slots available. 20 min from Varkala Cliff. Local guides & safety gear included. Book now.',
     keywords: ['stand up paddle Kerala', 'SUP Paravur Lake', 'paddleboarding Varkala', 'stand up paddle backwaters', 'SUP Kerala'],
     schemaPrice: '1000',
     schemaCurrency: 'INR',
@@ -106,15 +106,15 @@ const activities = {
       'Highly photogenic experience',
       'Minimum 2 persons required',
     ],
-    metaTitle: 'Coracle Ride at Paravur Backwaters, Kerala | Mangrove Moments',
-    metaDesc: 'Traditional coracle ride at Paravur Backwaters near Varkala, Kerala. ₹300/person. Unique round basket boat experience — a centuries-old Kerala tradition. Book now.',
+    metaTitle: 'Coracle Ride Varkala | Traditional Round Boat Paravur Lake',
+    metaDesc: 'Unique coracle boat ride on Paravur Lake near Varkala. Traditional round boat experience with local guides. Safe, photogenic & beginner-friendly. 20 min from Varkala Cliff.',
     keywords: ['coracle ride Kerala', 'coracle boat Paravur', 'traditional coracle Kerala', 'round boat ride Kerala backwaters', 'coracle Varkala'],
     schemaPrice: '300',
     schemaCurrency: 'INR',
   },
   'atv-ride': {
     slug: 'atv-ride',
-    name: 'ATV Ride',
+    name: 'ATV Off-Road Adventure near Varkala at Paravur Lake',
     tagline: 'Off-road adrenaline beside the backwaters',
     duration: '1 round',
     price: '₹300',
@@ -132,8 +132,34 @@ const activities = {
       'Great for thrill-seekers & groups',
       'Quick, high-energy experience',
     ],
-    metaTitle: 'ATV Ride at Paravur Backwaters, Varkala | Mangrove Moments',
-    metaDesc: 'ATV quad bike ride beside Paravur Lake near Varkala, Kerala. ₹300/person. Off-road adrenaline experience with backwater views. Book on WhatsApp today.',
+    metaTitle: 'ATV Ride Varkala | Off-Road Adventure Paravur Lake',
+    metaDesc: 'Quad bike adventure trails near Varkala at Paravur Lake. ATV off-road experience for all skill levels. 20 min from Varkala Cliff. Combine with kayaking for a full day.',
+    keywords: ['ATV ride Varkala', 'ATV Paravur backwaters', 'quad bike Kerala', 'off-road Varkala', 'ATV ride Kerala backwaters'],
+    schemaPrice: '300',
+    schemaCurrency: 'INR',
+  },
+  'atv': {
+    slug: 'atv',
+    name: 'ATV Off-Road Adventure near Varkala at Paravur Lake',
+    tagline: 'Off-road adrenaline beside the backwaters',
+    duration: '1 round',
+    price: '₹300',
+    priceNote: 'Per person',
+    minPersons: 1,
+    tag: 'Adrenaline',
+    tagColor: '#c94c4c',
+    icon: '🏍️',
+    image: '/avtride.webp',
+    description: 'Get your blood pumping with a high-octane ATV quad bike ride on the rugged terrain beside Paravur Lake. Feel the roar of the engine as you tear across uneven ground, with stunning backwater views alongside you. A short but intensely satisfying off-road adventure — perfect as a complement to your water activities.',
+    highlights: [
+      'No driving experience required',
+      'Safety briefing & gear provided',
+      'Scenic terrain beside the backwaters',
+      'Great for thrill-seekers & groups',
+      'Quick, high-energy experience',
+    ],
+    metaTitle: 'ATV Ride Varkala | Off-Road Adventure Paravur Lake',
+    metaDesc: 'Quad bike adventure trails near Varkala at Paravur Lake. ATV off-road experience for all skill levels. 20 min from Varkala Cliff. Combine with kayaking for a full day.',
     keywords: ['ATV ride Varkala', 'ATV Paravur backwaters', 'quad bike Kerala', 'off-road Varkala', 'ATV ride Kerala backwaters'],
     schemaPrice: '300',
     schemaCurrency: 'INR',
@@ -158,8 +184,8 @@ const activities = {
       'Best when combined with a leisurely coracle or kayak',
       'Available throughout the day',
     ],
-    metaTitle: 'Speed Boat Ride at Paravur Lake, Varkala | Mangrove Moments',
-    metaDesc: 'Speed boat ride on Paravur Lake near Varkala, Kerala. ₹3,500 for 1–5 persons, 30 minutes. High-speed water adventure in Kerala backwaters. Book on WhatsApp.',
+    metaTitle: 'Speed Boat Ride Paravur Lake | High-Speed Varkala Backwaters',
+    metaDesc: 'Speed boat ride on Paravur Lake near Varkala Cliff. ₹3,500 for up to 5 persons. High-speed backwater tour with experienced captain. Book on WhatsApp.',
     keywords: ['speed boat Paravur', 'speed boat ride Varkala', 'speed boat Kerala backwaters', 'Paravur Lake speed boat', 'boat ride Varkala'],
     schemaPrice: '3500',
     schemaCurrency: 'INR',
@@ -184,8 +210,8 @@ const activities = {
       'Multiple rounds available',
       'Combines well with banana boat for full water sports session',
     ],
-    metaTitle: 'Bumper Ride / Sofa Ride at Paravur Backwaters | Mangrove Moments',
-    metaDesc: 'Bumper ride and sofa ride water sports at Paravur Lake near Varkala, Kerala. ₹500/person. Thrilling inflatable tube rides pulled by speedboat. Book on WhatsApp.',
+    metaTitle: 'Water Sports near Varkala Cliff | Speed Boat, Banana & Bumper Rides',
+    metaDesc: 'Thrilling speed boat, banana ride & bumper rides at Paravur Lake. Best water sports near Varkala Cliff. Group bookings welcome. Local guides & safety equipment. Book now.',
     keywords: ['bumper ride Kerala', 'sofa ride Kerala backwaters', 'water bumper Paravur', 'inflatable tube ride Varkala', 'water sports Paravur'],
     schemaPrice: '500',
     schemaCurrency: 'INR',
@@ -210,8 +236,8 @@ const activities = {
       'Best experience for groups of 4+',
       'Professional boat operators',
     ],
-    metaTitle: 'Banana Boat Ride at Paravur Backwaters, Varkala | Mangrove Moments',
-    metaDesc: 'Banana boat ride at Paravur Lake near Varkala, Kerala. ₹500/person. Group water fun on Kerala backwaters. Book on WhatsApp at Mangrove Moments.',
+    metaTitle: 'Water Sports near Varkala Cliff | Speed Boat, Banana & Bumper Rides',
+    metaDesc: 'Thrilling speed boat, banana ride & bumper rides at Paravur Lake. Best water sports near Varkala Cliff. Group bookings welcome. Local guides & safety equipment. Book now.',
     keywords: ['banana boat ride Kerala', 'banana ride Paravur', 'banana boat Varkala', 'group water sports Kerala', 'inflatable banana boat Kerala backwaters'],
     schemaPrice: '500',
     schemaCurrency: 'INR',
@@ -816,6 +842,36 @@ export default async function ActivityDetailPage({
                 }}>
                   All activities are conducted with trained guides and full safety equipment. Life jackets are provided for all water activities. We prioritise your safety above all else.
                 </p>
+              </div>
+            </div>
+
+            {/* How to Reach Box */}
+            <div
+              style={{
+                marginTop: 24,
+                padding: '24px',
+                background: '#fff',
+                border: '1px solid rgba(201,168,76,0.3)',
+                fontFamily: "'Jost', sans-serif",
+              }}
+            >
+              <div style={{
+                fontSize: '0.7rem',
+                fontWeight: 600,
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: '#c9a84c',
+                marginBottom: 10,
+              }}>
+                📍 How to Reach Our Launch Ramp
+              </div>
+              <div style={{ fontSize: '0.82rem', color: '#555', lineHeight: 1.8, fontWeight: 300 }}>
+                <p>📍 <strong>Location:</strong> Nedungolam, Paravur Lake — 20 min from Varkala Cliff</p>
+                <p>🚗 <strong>From Varkala Railway Station:</strong> 18 min</p>
+                <p>🚗 <strong>From Kollam:</strong> 35 min</p>
+                <p>🚗 <strong>From Trivandrum Airport:</strong> 75 min</p>
+                <p>🅿️ <strong>Free parking available</strong></p>
+                <p>📱 <strong>Book:</strong> WhatsApp +91 97442 01662</p>
               </div>
             </div>
           </div>

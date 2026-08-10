@@ -7,8 +7,8 @@ import { Users, Shield, Leaf, Clock, ArrowRight, MessageCircle } from 'lucide-re
 const siteUrl = 'https://www.mangrovemoments.com'
 
 export const metadata: Metadata = {
-  title: 'About Us | Mangrove Moments Boatclub Varkala',
-  description: 'Meet the local naturalist guides behind Varkala\'s best mangrove kayaking & eco-boat tours. Learn about our safety record, conservation mission, and community values.',
+  title: 'About Mangrove Moments | Local Eco Adventure Guides Varkala',
+  description: 'Meet the local guides behind Mangrove Moments. 4+ years of eco-tourism at Paravur Lake near Varkala. 580+ happy guests. Responsible, safe, community-driven backwater tours.',
   keywords: ['things to do near Varkala', 'mangrove moments guides', 'Varkala eco tourism', 'Kerala backwaters boatclub'],
   alternates: {
     canonical: '/about',
@@ -68,14 +68,13 @@ export default function AboutPage() {
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
+                fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)',
                 fontWeight: 300,
                 lineHeight: 1.15,
                 marginBottom: '20px',
               }}
             >
-              Preserving the Quiet Magic <br />
-              <span style={{ fontStyle: 'italic', color: '#e8d49a' }}>of Kerala Backwaters</span>
+              About Mangrove Moments — Local Eco Adventure Guides at Paravur Lake
             </h1>
             <p
               style={{

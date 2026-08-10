@@ -481,14 +481,14 @@ export function HeroSection() {
           className="hero-title text-white mb-5"
           style={{ fontFamily:"'Cormorant Garamond',Georgia,serif", fontSize:'clamp(2.4rem,6vw,4.8rem)', fontWeight:300, lineHeight:1.1, letterSpacing:'-.01em' }}
         >
-          Mangrove Kayaking in Varkala
+          Guided Mangrove Kayaking & Backwater Adventures
           <br />
-          <em style={{ fontStyle:'italic', fontWeight:400, color:'#e8d49a' }}>& Paravur Backwaters</em>
+          <em style={{ fontStyle:'italic', fontWeight:400, color:'#e8d49a' }}>near Varkala Cliff</em>
         </h1>
 
         <div className="hero-sub flex flex-col items-center justify-center gap-2 mb-6">
-          <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'1.05rem', fontWeight:300, color:'#ffffff', letterSpacing:'.04em', textShadow:'0 1px 12px rgba(0,0,0,.8)', maxWidth:'720px' }}>
-            Guided & 100% safe eco-tours through ancient mangrove forest canals. Best at sunrise & golden hour. Open daily 5:30 AM – 6:00 PM.
+          <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'0.95rem', fontWeight:300, color:'#ffffff', letterSpacing:'.03em', textShadow:'0 1px 12px rgba(0,0,0,.8)', maxWidth:'780px', lineHeight: 1.6 }}>
+            Mangrove Moments offers guided kayaking, country boat rides, stand-up paddleboarding, coracle rides, and water sports at Paravur Lake — just 20 minutes from Varkala Cliff. Explore narrow mangrove forest canals at sunrise or sunset with certified local guides, safety equipment, and life jackets. Beginner-friendly. Open daily 5:30 AM–6:00 PM. Group discounts and pickup available.
           </p>
         </div>
 

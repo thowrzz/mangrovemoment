@@ -536,6 +536,7 @@ const activities = [
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/things-to-do-in-varkala', label: 'Things to Do' },
   { href: '/#activities', label: 'Activities' },
   { href: '/location-paravur-backwaters', label: 'Location' },
   { href: '/about', label: 'About' },

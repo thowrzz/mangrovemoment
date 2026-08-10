@@ -9,8 +9,8 @@ import { Clock, Users, MessageCircle, MapPin, Shield, Star, Sun, Info, CheckCirc
 const siteUrl = 'https://www.mangrovemoments.com'
 
 export const metadata: Metadata = {
-  title: 'Varkala Mangrove Kayaking | Paravur Backwaters Tour',
-  description: 'Bookguided mangrove kayaking in Varkala and Paravur Backwaters. ₹700/person, 2 hours, no swimming required. Guided sunrise & sunset tours daily.',
+  title: 'Mangrove Forest Kayaking Varkala | Paravur Lake Guided Tours — Mangrove Moments',
+  description: 'Paddle through mangrove tunnels at Paravur Lake. Guided sunrise & sunset kayaking 20 min from Varkala Cliff. Safe for beginners. Life jackets & local guides included. From ₹700. Book now.',
   keywords: ['Varkala mangrove kayaking', 'Paravur backwaters kayaking', 'mangrove kayaking near Varkala', 'guided kayaking Kerala backwaters', 'things to do in Varkala'],
   alternates: {
     canonical: '/activities/kayaking',
@@ -35,6 +35,10 @@ export default function KayakingPage() {
     {
       q: 'What is the best time for kayaking?',
       a: 'Sunrise (5:30 AM) is the most recommended slot because the water is mirror-flat, temperatures are cool, and birds are active. Sunset (4:30 PM) is another excellent slot offering golden hour photography.'
+    },
+    {
+      q: 'How far is Paravur Lake from Varkala Cliff?',
+      a: 'Paravur Lake is approximately 20 minutes (9.2 km) north of Varkala Cliff. We offer pickup and drop-off services on request.'
     }
   ]
 
@@ -53,20 +57,41 @@ export default function KayakingPage() {
 
   const kayakingSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${siteUrl}/activities/kayaking#service`,
-    'name': 'Varkala Mangrove Kayaking',
-    'description': 'Guided eco-kayaking tour through narrow mangrove channels of Paravur Backwaters near Varkala, Kerala.',
-    'provider': {
-      '@type': 'LocalBusiness',
-      'name': 'Mangrove Moments Boatclub'
+    '@type': 'TouristAttraction',
+    '@id': `${siteUrl}/activities/kayaking#attraction`,
+    'name': 'Mangrove Forest Kayaking near Varkala',
+    'description': 'Guided mangrove kayaking through Paravur Lake tunnels. Sunrise & sunset slots. Safe for beginners. 20 min from Varkala Cliff.',
+    'url': `${siteUrl}/activities/kayaking`,
+    'image': `${siteUrl}/Kayaking.png`,
+    'isPartOf': {
+      '@type': 'TouristAttraction',
+      'name': 'Mangrove Moments'
     },
     'offers': {
       '@type': 'Offer',
       'priceCurrency': 'INR',
       'price': '700',
-      'availability': 'https://schema.org/InStock'
+      'availability': 'https://schema.org/InStock',
+      'validFrom': '2026-08-10'
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '5.0',
+      'reviewCount': '580'
     }
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': kayakingFaqs.map(f => ({
+      '@type': 'Question',
+      'name': f.q,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': f.a
+      }
+    }))
   }
 
   return (
@@ -74,6 +99,10 @@ export default function KayakingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(kayakingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-[#f7f5f0]">
         <Navbar />
@@ -128,14 +157,14 @@ export default function KayakingPage() {
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.4rem, 6vw, 4.4rem)',
+                fontSize: 'clamp(2.2rem, 5.5vw, 4.2rem)',
                 fontWeight: 300,
                 color: '#fff',
                 lineHeight: 1.1,
                 marginBottom: '12px',
               }}
             >
-              Varkala Mangrove Kayaking
+              Mangrove Forest Kayaking near Varkala Cliff at Paravur Lake
             </h1>
             <p
               style={{
@@ -212,7 +241,7 @@ export default function KayakingPage() {
           >
             {/* Left Column: Details */}
             <div>
-              {/* What it is like */}
+              {/* What to Expect */}
               <div style={{ marginBottom: '40px' }}>
                 <span
                   style={{
@@ -237,7 +266,7 @@ export default function KayakingPage() {
                     marginBottom: '16px',
                   }}
                 >
-                  What the Experience is Like
+                  What to Expect on Your Kayaking Tour
                 </h2>
                 <p
                   style={{
@@ -263,6 +292,90 @@ export default function KayakingPage() {
                 >
                   Here, branches wrap overhead to form a natural green canopy. You will navigate tight bends, gliding silently between giant mangrove root walls that motorized boats cannot access. Look out for nesting herons, kingfishers diving for small fish, and the local fishermen cast-netting in the channels.
                 </p>
+              </div>
+
+              {/* Why Paravur Lake */}
+              <div style={{ marginBottom: '40px' }}>
+                <h2
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: '2rem',
+                    fontWeight: 600,
+                    color: '#0d2415',
+                    marginBottom: '16px',
+                  }}
+                >
+                  Why Paravur Lake is the Best Kayaking Spot near Varkala
+                </h2>
+                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.92rem', color: '#555', lineHeight: 1.8, fontWeight: 300, marginBottom: '14px' }}>
+                  While Varkala Cliff is famous for beaches, Paravur Lake (just 20 minutes away) offers Kerala's most pristine, uncrowded mangrove ecosystem. Unlike busy backwaters elsewhere, Paravur Backwaters features narrow natural canals where roots interlock overhead, creating mirror-flat, sheltered waters ideal for peaceful paddling.
+                </p>
+              </div>
+
+              {/* Sunrise vs Sunset */}
+              <div style={{ marginBottom: '40px' }}>
+                <h2
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: '2rem',
+                    fontWeight: 600,
+                    color: '#0d2415',
+                    marginBottom: '16px',
+                  }}
+                >
+                  Sunrise vs Sunset Kayaking — Which to Choose?
+                </h2>
+                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.92rem', color: '#555', lineHeight: 1.8, fontWeight: 300, marginBottom: '14px' }}>
+                  <strong>Sunrise (5:30 AM):</strong> Ideal for birdwatching and photography. The water is glassy, the morning mist hangs over the mangrove tunnels, and temperatures are perfectly cool.<br />
+                  <strong>Sunset (4:30 PM):</strong> Ideal for golden hour lighting across the open backwaters as the sun dips into the horizon.
+                </p>
+              </div>
+
+              {/* Quick Win Box: How to Reach */}
+              <div style={{ background: '#fff', border: '1px solid rgba(201,168,76,0.25)', padding: '24px', marginBottom: '40px', fontFamily: "'Jost', sans-serif" }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.4rem', fontWeight: 700, color: '#0d2415', marginBottom: '12px' }}>
+                  📍 How to Reach Our Launch Ramp
+                </h3>
+                <div style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.8, fontWeight: 300 }}>
+                  <p><strong>Location:</strong> Nedungolam, Paravur Lake — 20 min from Varkala Cliff</p>
+                  <p>🚗 <strong>From Varkala Railway Station:</strong> 18 min (8.5 km)</p>
+                  <p>🚗 <strong>From Kollam City:</strong> 35 min (28 km)</p>
+                  <p>🚗 <strong>From Trivandrum Airport:</strong> 75 min (55 km)</p>
+                  <p>🅿️ <strong>Parking:</strong> Free on-site parking available for cars & scooters</p>
+                </div>
+              </div>
+
+              {/* Quick Win Box: Why Book With Us */}
+              <div style={{ background: '#0d2415', color: '#fff', padding: '28px', marginBottom: '40px', fontFamily: "'Jost', sans-serif" }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.5rem', fontWeight: 600, color: '#e8d49a', marginBottom: '16px' }}>
+                  Why Book With Mangrove Moments
+                </h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', fontSize: '0.82rem', fontWeight: 300 }}>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <CheckCircle size={14} color="#c9a84c" />
+                    <span>580+ Google Reviews — 5.0★ Rating</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <CheckCircle size={14} color="#c9a84c" />
+                    <span>Local naturalist guides</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <CheckCircle size={14} color="#c9a84c" />
+                    <span>All safety equipment included</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <CheckCircle size={14} color="#c9a84c" />
+                    <span>Beginner-friendly — no swimming needed</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <CheckCircle size={14} color="#c9a84c" />
+                    <span>Flexible sunrise & sunset slots</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                    <CheckCircle size={14} color="#c9a84c" />
+                    <span>Group discounts & pickup available</span>
+                  </div>
+                </div>
               </div>
 
               {/* Inclusions */}
@@ -312,19 +425,19 @@ export default function KayakingPage() {
                   marginBottom: '40px',
                 }}
               >
-                <h3
+                <h2
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: '1.35rem',
+                    fontSize: '1.8rem',
                     fontWeight: 700,
                     color: '#0d2415',
                     marginBottom: '8px',
                   }}
                 >
-                  Safety Protocol & Fit
-                </h3>
+                  Is Kayaking Safe for Beginners and Non-Swimmers?
+                </h2>
                 <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: 1.6, fontWeight: 300 }}>
-                  Safety is our number one priority. Our double and single sit-on-top kayaks are designed for extreme stability, making it practically impossible to tip over under normal backwater conditions. Wearing life jackets is mandatory for all guests (including children). A guide leads every session and holds emergency towing lines.
+                  Yes! 95% of our guests are absolute first-timers. Our double and single sit-on-top kayaks are engineered for maximum stability, making flipping over practically impossible in calm backwater conditions. Wearing certified life jackets is mandatory for all guests (including children and non-swimmers), and trained guides paddle alongside your group at all times.
                 </p>
               </div>
 

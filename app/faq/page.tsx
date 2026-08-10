@@ -7,8 +7,8 @@ import { MessageCircle, HelpCircle, Clock, Shield, Compass, MapPin, Smile, Landm
 const siteUrl = 'https://www.mangrovemoments.com'
 
 export const metadata: Metadata = {
-  title: 'Varkala Mangrove Kayaking FAQ | Booking, Safety & Prices',
-  description: 'Got questions about kayaking near Varkala? Read our FAQs on safety, swimming requirements, prices, best time to visit, and distance from Varkala Cliff.',
+  title: 'Kayaking FAQ Varkala | Paravur Lake Questions & Answers',
+  description: 'Got questions about kayaking near Varkala? Find answers about safety, timings, swimming, booking, what to wear & more for Paravur Lake mangrove tours.',
   keywords: ['kayaking near Varkala', 'Varkala mangrove kayaking price', 'mangrove forest tour Kerala safety', 'things to do near Varkala FAQ'],
   alternates: {
     canonical: '/faq',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: `${siteUrl}/faq`,
-    title: 'Varkala Mangrove Kayaking FAQ | Booking, Safety & Prices',
-    description: 'Find answers to booking questions, pricing lists, clothing suggestions, and swimming details for Varkala mangrove kayaking and Paravur backwater tours.',
+    title: 'Kayaking FAQ Varkala | Paravur Lake Questions & Answers',
+    description: 'Got questions about kayaking near Varkala? Find answers about safety, timings, swimming, booking, what to wear & more for Paravur Lake mangrove tours.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Mangrove Moments Booking FAQs' }],
   },
 }
@@ -68,12 +68,12 @@ export default function FAQPage() {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'mainEntity': faqItems.map(item => ({
+    'mainEntity': faqItems.map(f => ({
       '@type': 'Question',
-      'name': item.question,
+      'name': f.question,
       'acceptedAnswer': {
         '@type': 'Answer',
-        'text': item.answer
+        'text': f.answer
       }
     }))
   }
@@ -109,19 +109,18 @@ export default function FAQPage() {
                 marginBottom: '16px',
               }}
             >
-              Have Questions?
+              Help & Information
             </p>
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
+                fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)',
                 fontWeight: 300,
                 lineHeight: 1.15,
                 marginBottom: '20px',
               }}
             >
-              Frequently Asked <br />
-              <span style={{ fontStyle: 'italic', color: '#e8d49a' }}>Questions</span>
+              Frequently Asked Questions about Kayaking & Boat Rides near Varkala
             </h1>
             <p
               style={{

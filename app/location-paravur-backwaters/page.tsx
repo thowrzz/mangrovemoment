@@ -7,8 +7,8 @@ import { MapPin, Clock, Compass, Navigation, Car, AlertTriangle, Calendar } from
 const siteUrl = 'https://www.mangrovemoments.com'
 
 export const metadata: Metadata = {
-  title: 'Paravur Backwaters near Varkala | Directions & Driving Map',
-  description: 'How to reach Paravur Backwaters from Varkala Cliff (20 mins). Route details, driving directions, landmarks, parking, and best times to visit for mangrove kayaking.',
+  title: 'How to Reach Paravur Lake from Varkala | Location & Directions',
+  description: 'Paravur Lake is 20 min from Varkala Cliff. Get directions, distances from Kollam, Trivandrum & Varkala Railway Station. Parking available. Find Mangrove Moments boat club location.',
   keywords: ['Paravur Backwaters near Varkala', 'mangrove kayaking near Varkala', 'how to reach Paravur Lake', 'Varkala to Paravur distance', 'Varkala activities map'],
   alternates: {
     canonical: '/location-paravur-backwaters',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: `${siteUrl}/location-paravur-backwaters`,
-    title: 'Paravur Backwaters near Varkala | Directions & Driving Map',
-    description: 'Find detailed driving routes, travel times, landmarks, and parking info for Mangrove Moments Boatclub, located just 20 minutes from Varkala Cliff.',
+    title: 'How to Reach Paravur Lake from Varkala | Location & Directions',
+    description: 'Paravur Lake is 20 min from Varkala Cliff. Get directions, distances from Kollam, Trivandrum & Varkala Railway Station. Parking available. Find Mangrove Moments boat club location.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Mangrove Moments Paravur Backwaters Location Map' }],
   },
 }
@@ -42,8 +42,8 @@ export default function LocationPage() {
     },
     'geo': {
       '@type': 'GeoCoordinates',
-      'latitude': '9.0200',
-      'longitude': '76.6200'
+      'latitude': '8.8147',
+      'longitude': '76.6994'
     },
     'hasMap': 'https://maps.google.com/?q=Paravur+Lake+Kerala'
   }
@@ -85,14 +85,13 @@ export default function LocationPage() {
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
+                fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)',
                 fontWeight: 300,
                 lineHeight: 1.15,
                 marginBottom: '20px',
               }}
             >
-              Paravur Backwaters <br />
-              <span style={{ fontStyle: 'italic', color: '#e8d49a' }}>near Varkala</span>
+              Paravur Lake Location: How to Reach from Varkala, Kollam & Trivandrum
             </h1>
             <p
               style={{
@@ -255,8 +254,70 @@ export default function LocationPage() {
           </div>
         </section>
 
+        {/* Distance Table Section */}
+        <section style={{ background: '#fff', padding: '60px 24px 0', fontFamily: "'Jost', sans-serif" }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+              <span style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#c9a84c', display: 'block', marginBottom: '8px' }}>
+                Distance Breakdown
+              </span>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '2.2rem', fontWeight: 600, color: '#0d2415' }}>
+                Distances & Driving Times to Mangrove Moments Boatclub
+              </h2>
+            </div>
+            
+            <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid rgba(0,0,0,0.08)', background: '#f7f5f0' }}>
+                <thead>
+                  <tr style={{ background: '#0d2415', color: '#fff', textAlign: 'left', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
+                    <th style={{ padding: '14px 20px', borderBottom: '2px solid #c9a84c' }}>From</th>
+                    <th style={{ padding: '14px 20px', borderBottom: '2px solid #c9a84c' }}>Distance</th>
+                    <th style={{ padding: '14px 20px', borderBottom: '2px solid #c9a84c' }}>Driving Time</th>
+                  </tr>
+                </thead>
+                <tbody style={{ fontSize: '0.88rem', color: '#444' }}>
+                  <tr style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+                    <td style={{ padding: '12px 20px', fontWeight: 500 }}>Varkala Cliff / Beach</td>
+                    <td style={{ padding: '12px 20px' }}>9.2 km</td>
+                    <td style={{ padding: '12px 20px', color: '#c9a84c', fontWeight: 600 }}>~20 min</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(0,0,0,0.06)', background: '#fff' }}>
+                    <td style={{ padding: '12px 20px', fontWeight: 500 }}>Varkala Railway Station</td>
+                    <td style={{ padding: '12px 20px' }}>8.5 km</td>
+                    <td style={{ padding: '12px 20px', color: '#c9a84c', fontWeight: 600 }}>~18 min</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+                    <td style={{ padding: '12px 20px', fontWeight: 500 }}>Kollam City</td>
+                    <td style={{ padding: '12px 20px' }}>28 km</td>
+                    <td style={{ padding: '12px 20px', color: '#c9a84c', fontWeight: 600 }}>~35 min</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(0,0,0,0.06)', background: '#fff' }}>
+                    <td style={{ padding: '12px 20px', fontWeight: 500 }}>Thiruvananthapuram Airport</td>
+                    <td style={{ padding: '12px 20px' }}>55 km</td>
+                    <td style={{ padding: '12px 20px', color: '#c9a84c', fontWeight: 600 }}>~75 min</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+                    <td style={{ padding: '12px 20px', fontWeight: 500 }}>Kappil Bridge</td>
+                    <td style={{ padding: '12px 20px' }}>5 km</td>
+                    <td style={{ padding: '12px 20px', color: '#c9a84c', fontWeight: 600 }}>~10 min</td>
+                  </tr>
+                  <tr style={{ background: '#fff' }}>
+                    <td style={{ padding: '12px 20px', fontWeight: 500 }}>Varkala Helipad</td>
+                    <td style={{ padding: '12px 20px' }}>7 km</td>
+                    <td style={{ padding: '12px 20px', color: '#c9a84c', fontWeight: 600 }}>~15 min</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', fontSize: '0.8rem', color: '#666', background: 'rgba(201,168,76,0.08)', padding: '12px 20px', borderLeft: '3px solid #c9a84c' }}>
+              <div><strong>Nearest Landmark:</strong> Nedungolam Bridge, Paravur</div>
+              <div><strong>Parking:</strong> Free on-site parking available for cars & bikes</div>
+            </div>
+          </div>
+        </section>
+
         {/* Travel Times Section */}
-        <section style={{ background: '#fff', padding: '80px 24px' }}>
+        <section style={{ background: '#fff', padding: '60px 24px 80px' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
               <p
