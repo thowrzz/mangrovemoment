@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: 'Mangrove Kayaking near Varkala Cliff | Paravur Lake Eco Tours — Mangrove Moments',
+    default: 'Mangrove Kayaking near Varkala Cliff | Mangrove Moments',
     template: '%s | Mangrove Moments Varkala',
   },
   description:
-    'Guided mangrove kayaking, country boat rides, SUP & water sports at Paravur Lake — 20 min from Varkala Cliff. 580+ 5-star reviews. Sunrise & sunset slots. Book on WhatsApp.',
+    'Guided mangrove kayaking, boat rides & SUP at Paravur Lake, 20 min from Varkala Cliff. 580+ 5-star reviews. Sunrise & sunset slots. Book on WhatsApp!',
 
   keywords: [
     'Paravur backwaters',
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: siteUrl,
     siteName: 'Mangrove Moments',
-    title: 'Mangrove Kayaking near Varkala Cliff | Paravur Lake Eco Tours — Mangrove Moments',
+    title: 'Mangrove Kayaking near Varkala Cliff | Mangrove Moments',
     description:
-      'Guided mangrove kayaking, country boat rides, SUP & water sports at Paravur Lake — 20 min from Varkala Cliff. 580+ 5-star reviews. Sunrise & sunset slots. Book on WhatsApp.',
+      'Guided mangrove kayaking, boat rides & SUP at Paravur Lake, 20 min from Varkala Cliff. 580+ 5-star reviews. Sunrise & sunset slots. Book on WhatsApp!',
     images: [
       {
         url: '/og-image.jpg',
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Mangrove Kayaking near Varkala Cliff | Paravur Lake Eco Tours — Mangrove Moments',
+    title: 'Mangrove Kayaking near Varkala Cliff | Mangrove Moments',
     description:
-      'Guided mangrove kayaking, country boat rides, SUP & water sports at Paravur Lake — 20 min from Varkala Cliff.',
+      'Guided mangrove kayaking, boat rides & SUP at Paravur Lake, 20 min from Varkala Cliff. 580+ 5-star reviews. Book on WhatsApp!',
     images: ['/og-image.jpg'],
   },
 
@@ -272,7 +272,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       style={
         {
           '--font-sans': _geist.variable,

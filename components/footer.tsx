@@ -615,11 +615,11 @@ export function Footer() {
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           <Link href="/contact" className="book-now-btn">
-            Book Now
+            Book Experience
             <ArrowUpRight size={13} />
           </Link>
           <a
-            href={`https://wa.me/${PRIMARY_WA}`}
+            href={`https://wa.me/${PRIMARY_WA}?text=Hi!%20I%20have%20an%20inquiry%20about%20booking%20an%20experience%20at%20Paravur%20Backwaters.`}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -641,7 +641,7 @@ export function Footer() {
             }}
           >
             <MessageCircle size={13} />
-            WhatsApp
+            WhatsApp Inquiries
           </a>
         </div>
       </div>

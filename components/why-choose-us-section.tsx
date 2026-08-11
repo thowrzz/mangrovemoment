@@ -401,12 +401,12 @@ export function WhyChooseUsSection() {
               className="cta-primary"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Book Now
+              Book Eco Adventure
               <Star size={13} fill="#0d2415" color="#0d2415" />
             </button>
-            <a href="https://wa.me/919744201662" target="_blank" rel="noopener noreferrer" className="cta-secondary">
+            <a href="https://wa.me/919744201662?text=Hi!%20I%20want%20to%20book%20a%20kayaking%20or%20boating%20session%20at%20Paravur." target="_blank" rel="noopener noreferrer" className="cta-secondary">
               <Phone size={13} />
-              WhatsApp Us
+              Reserve on WhatsApp
             </a>
           </div>
         </div>
