@@ -97,70 +97,22 @@ export const metadata: Metadata = {
   },
 }
 
-// ─── JSON-LD: Tourist Attraction ───────────────────────────────────────────
-const touristAttractionLd = {
+// ─── JSON-LD: Local Business & Tourist Attraction ─────────────────────────
+const localBusinessLd = {
   '@context': 'https://schema.org',
-  '@type': 'TouristAttraction',
+  '@type': ['LocalBusiness', 'TouristAttraction'],
+  '@id': `${siteUrl}/#localbusiness`,
   name: 'Mangrove Moments - Paravur Lake Eco Adventures',
+  alternateName: 'Mangrove Moments',
   description:
     'Guided mangrove kayaking, country boat rides, SUP, coracle rides and water sports at Paravur Lake, 20 minutes from Varkala Cliff.',
   url: siteUrl,
-  logo: `${siteUrl}/logo.png`,
-  image: `${siteUrl}/og-image.jpg`,
   telephone: '+91-9744201662',
-  alternateName: 'Mangrove Moments Paravur',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Nedungolam, Paravur Lake',
-    addressLocality: 'Paravur',
-    addressRegion: 'Kerala',
-    postalCode: '691334',
-    addressCountry: 'IN',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: '8.8147',
-    longitude: '76.6994',
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: [
-      'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-      'Friday', 'Saturday', 'Sunday',
-    ],
-    opens: '05:30',
-    closes: '18:00',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '580',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  logo: `${siteUrl}/logo.png`,
+  image: [`${siteUrl}/og-image.jpg`],
   priceRange: '₹₹',
   currenciesAccepted: 'INR',
   paymentAccepted: 'Cash, UPI',
-  touristType: ['Nature lovers', 'Adventure seekers', 'Families', 'Students', 'Corporate groups'],
-  hasMap: 'https://maps.google.com/?q=Paravur+Lake+Kerala',
-  sameAs: [
-    'https://www.instagram.com/varkala_mangrove_moments',
-  ],
-}
-
-// ─── JSON-LD: Local Business ────────────────────────────────────────────────
-const localBusinessLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': `${siteUrl}/#localbusiness`,
-  name: 'Mangrove Moments',
-  description:
-    'Water sports and eco-adventure destination at Paravur Backwaters, 20 minutes from Varkala. Offering kayaking, country boating, coracle rides, ATV rides, speed boat, bumper ride, and banana boat.',
-  url: siteUrl,
-  telephone: '+91-9744201662',
-  image: `${siteUrl}/og-image.jpg`,
-  logo: `${siteUrl}/logo.png`,
-  priceRange: '₹₹',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Nedungolam, Paravur Lake',
@@ -171,18 +123,25 @@ const localBusinessLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '8.8147',
-    longitude: '76.6994',
+    latitude: 8.8147,
+    longitude: 76.6994,
   },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: [
-      'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-      'Friday', 'Saturday', 'Sunday',
-    ],
-    opens: '05:30',
-    closes: '18:00',
-  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+      opens: '05:30',
+      closes: '18:00',
+    },
+  ],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
@@ -190,9 +149,9 @@ const localBusinessLd = {
     bestRating: '5',
     worstRating: '1',
   },
-  sameAs: [
-    'https://www.instagram.com/varkala_mangrove_moments',
-  ],
+  touristType: ['Nature lovers', 'Adventure seekers', 'Families', 'Students', 'Corporate groups'],
+  hasMap: 'https://maps.google.com/?q=Paravur+Lake+Kerala',
+  sameAs: ['https://www.instagram.com/varkala_mangrove_moments'],
 }
 
 // ─── JSON-LD: FAQ Page ──────────────────────────────────────────────────────
@@ -282,13 +241,7 @@ export default function RootLayout({
       }
     >
       <head>
-        {/* JSON-LD: Tourist Attraction */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttractionLd) }}
-        />
-
-        {/* JSON-LD: Local Business (Google Business Profile compatible) */}
+        {/* JSON-LD: Local Business & Tourist Attraction */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessLd) }}
