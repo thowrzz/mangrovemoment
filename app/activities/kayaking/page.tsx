@@ -57,7 +57,7 @@ export default function KayakingPage() {
 
   const kayakingSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TouristAttraction',
+    '@type': ['LocalBusiness', 'TouristAttraction'],
     '@id': `${siteUrl}/activities/kayaking#attraction`,
     'name': 'Mangrove Forest Kayaking near Varkala',
     'description': 'Guided mangrove kayaking through Paravur Lake tunnels. Sunrise & sunset slots. Safe for beginners. 20 min from Varkala Cliff.',

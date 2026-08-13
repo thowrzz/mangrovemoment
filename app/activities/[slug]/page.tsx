@@ -316,7 +316,7 @@ export default async function ActivityDetailPage({
   // JSON-LD for this activity
   const activityLd = {
     '@context': 'https://schema.org',
-    '@type': 'TouristAttraction',
+    '@type': ['LocalBusiness', 'TouristAttraction'],
     name: `${activity.name} — Mangrove Moments`,
     description: activity.description,
     url: `${siteUrl}/activities/${slug}`,
