@@ -488,7 +488,7 @@ export function HeroSection() {
 
         <div className="hero-sub flex flex-col items-center justify-center gap-2 mb-6">
           <p style={{ fontFamily:"'Jost',sans-serif", fontSize:'0.95rem', fontWeight:300, color:'#ffffff', letterSpacing:'.03em', textShadow:'0 1px 12px rgba(0,0,0,.8)', maxWidth:'780px', lineHeight: 1.6 }}>
-            Mangrove Moments offers guided mangrove kayaking, country boat rides, stand-up paddleboarding, coracle rides, and backwater adventures at Paravur Lake — just 20 minutes from Varkala Cliff. Explore narrow mangrove forest canals at sunrise or sunset with certified local guides and safety gear. Suitable for beginners, groups, and families. Open daily 5:30 AM–6:00 PM. Pickup and drop service available.
+            Mangrove Moments offers guided mangrove kayaking and backwater adventures near Varkala Cliff at Paravur Lake, Kerala. Paddle through narrow mangrove forest canals at sunrise or sunset with certified local guides, high-buoyancy life vests, and complete safety equipment. Also offering country boat rides, stand-up paddleboarding, coracle rides, and water sports. Beginner-friendly. Open daily 5:30 AM–6:00 PM. Hotel pickup available.
           </p>
         </div>
 
